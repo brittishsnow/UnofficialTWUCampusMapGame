@@ -1,9 +1,11 @@
 package com.maxstow.unofficialtwucampusmapgame;
 
+import android.support.annotation.StringRes;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Button;
 import android.graphics.Color;
@@ -27,20 +29,20 @@ public class MainActivity extends ActionBarActivity {
         //Button
         Button userNameInputButton;
         userNameInputButton = new Button(this);
-        userNameInputButton.setText("Confirm");
+        userNameInputButton.setText(getString(R.string.userNameInputButtonText));
         userNameInputButton.setBackgroundColor(Color.LTGRAY);
 
         //Username input
-        EditText userNameInput;
+        final EditText userNameInput;
         userNameInput = new EditText(this);
 
         //Username text instruction
         TextView userNameTextInstruction;
         userNameTextInstruction = new TextView(this);
-        userNameTextInstruction.setText("Please enter a name to be used for the app.");
+        userNameTextInstruction.setText(getString(R.string.userNameTextInstructionText));
 
         //Username text printout
-        TextView userNamePrinted;
+        final TextView userNamePrinted;
         userNamePrinted = new TextView(this);
 
         //Id allocation from id values given in the ids xml file
@@ -61,8 +63,14 @@ public class MainActivity extends ActionBarActivity {
                 RelativeLayout.LayoutParams.WRAP_CONTENT
         );
 
-        //Details on the formatting of the TextView
+        //Details on the formatting of the TextView Above
         RelativeLayout.LayoutParams userNameTextInstructionDetails = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT
+        );
+
+        //Details on the formatting of the TextView Below
+        RelativeLayout.LayoutParams userNameTextPrintedDetails = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT
         );
@@ -88,11 +96,17 @@ public class MainActivity extends ActionBarActivity {
 
         userNameInput.setWidth(px);
 
-            //TextView
+        //TextView Above
         userNameTextInstructionDetails.addRule(RelativeLayout.ABOVE, userNameInput.getId());
         userNameTextInstructionDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
         userNameTextInstructionDetails.setMargins(0,0,0,50);
         userNameTextInstructionDetails.addRule(RelativeLayout.CENTER_VERTICAL);
+
+        //TextView Below
+        userNameTextPrintedDetails.addRule(RelativeLayout.BELOW, userNameInputButton.getId());
+        userNameTextPrintedDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        userNameTextPrintedDetails.setMargins(50, 0, 0, 0);
+        userNameTextPrintedDetails.addRule(RelativeLayout.CENTER_VERTICAL);
 
 
         //Add widget to the layout(button is now a child of the layout)
@@ -106,10 +120,23 @@ public class MainActivity extends ActionBarActivity {
             //adds Button to layout
         mainLayout.addView(userNameInputButton, userNameInputButtonDetails);
 
+            //add EditText to layout
+        mainLayout.addView(userNamePrinted, userNameTextPrintedDetails);
+
         //Set this activates
         setContentView(mainLayout);
 
+        //Make the button listen for a click
+        userNameInputButton.setOnClickListener(
+            new Button.OnClickListener() {
+                public void onClick(View view) {
+                    userNamePrinted.setText(userNameInput.getText().toString());
+                }
+            }
+        );
+
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
