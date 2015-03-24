@@ -1,19 +1,17 @@
 package com.maxstow.unofficialtwucampusmapgame;
 
-import android.support.annotation.StringRes;
-import android.support.v7.app.ActionBarActivity;
+import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.RelativeLayout;
 import android.widget.Button;
-import android.graphics.Color;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.content.res.Resources;
-import android.util.TypedValue;
-
 
 public class MainActivity extends ActionBarActivity {
 
@@ -52,25 +50,29 @@ public class MainActivity extends ActionBarActivity {
         userNamePrinted.setId(R.id.userNamePrinted);
 
         //Details on the formatting of the Button
-        RelativeLayout.LayoutParams userNameInputButtonDetails = new RelativeLayout.LayoutParams(
+        RelativeLayout.LayoutParams userNameInputButtonDetails;
+        userNameInputButtonDetails = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT
         );
 
         //Details on the formatting of the EditText
-        RelativeLayout.LayoutParams userNameInputDetails = new RelativeLayout.LayoutParams(
+        RelativeLayout.LayoutParams userNameInputDetails;
+        userNameInputDetails = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT
         );
 
         //Details on the formatting of the TextView Above
-        RelativeLayout.LayoutParams userNameTextInstructionDetails = new RelativeLayout.LayoutParams(
+        RelativeLayout.LayoutParams userNameTextInstructionDetails;
+        userNameTextInstructionDetails = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT
         );
 
         //Details on the formatting of the TextView Below
-        RelativeLayout.LayoutParams userNameTextPrintedDetails = new RelativeLayout.LayoutParams(
+        RelativeLayout.LayoutParams userNameTextPrintedDetails;
+        userNameTextPrintedDetails = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT
         );
@@ -105,7 +107,7 @@ public class MainActivity extends ActionBarActivity {
         //TextView Below
         userNameTextPrintedDetails.addRule(RelativeLayout.BELOW, userNameInputButton.getId());
         userNameTextPrintedDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        userNameTextPrintedDetails.setMargins(50, 0, 0, 0);
+        userNameTextPrintedDetails.setMargins(200, 0, 0, 0);
         userNameTextPrintedDetails.addRule(RelativeLayout.CENTER_VERTICAL);
 
 
