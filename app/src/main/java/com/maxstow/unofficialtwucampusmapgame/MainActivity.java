@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.content.Intent;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -126,14 +127,31 @@ public class MainActivity extends ActionBarActivity {
         //Set this activates
         setContentView(mainLayout);
 
+        //Intents
+        Intent intent = new Intent(this, DebugIntentService.class);
+        startService(intent);
+
+        Intent i = new Intent(this, DebugService.class);
+        startService(i);
+
         //Make the button listen for a click
         userNameInputButton.setOnClickListener(
             new Button.OnClickListener() {
                 public void onClick(View view) {
-                    userNamePrinted.setText(userNameInput.getText().toString());
-                }
-            }
-        );
+                    moveToWelcome();
 
+
+                    //userNamePrinted.setText(userNameInput.getText().toString());
+                }
+
+
+
+        });
+
+    }
+
+    private void moveToWelcome() {
+            Intent buttonIntent = new Intent(this, Welcome.class);
+            startActivity(buttonIntent);
     }
 }
