@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <item name="userNameInputButton" type="id" />
     <item name="userNameInput" type="id" />
     <item name="userNameTextInstruction" type="id" />

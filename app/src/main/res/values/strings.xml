@@ -5,4 +5,7 @@
 
     <string name="userNameInputButtonText">Confirm</string>
     <string name="userNameTextInstructionText">Please enter a name to be used for the app.</string>
+    <string name="title_activity_welcome">Welcome</string>
+
+    <string name="hello_world">Hello world!</string>
 </resources>
