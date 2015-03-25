@@ -1,5 +1,6 @@
 package com.maxstow.unofficialtwucampusmapgame;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -88,8 +89,22 @@ public class Welcome extends ActionBarActivity {
 
         //Sets this as active layout
         setContentView(welcomeLayout);
+
+        //Make the button listen for a click
+        backButton.setOnClickListener(
+                new Button.OnClickListener() {
+                    public void onClick(View view) {
+                        moveToMain();
+                        //userNamePrinted.setText(userNameInput.getText().toString());
+                    }
+                });
+
     }
 
+    private void moveToMain() {
+        Intent buttonIntent = new Intent(this, MainActivity.class);
+        startActivity(buttonIntent);
+    }
 
 
 }
