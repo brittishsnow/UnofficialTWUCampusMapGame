@@ -62,7 +62,7 @@ public class MainActivity extends ActionBarActivity {
                 RelativeLayout.LayoutParams.WRAP_CONTENT
         );
 
-        //Details on the formatting of the TextView Above
+        //Details on the formatting of the TextView
         RelativeLayout.LayoutParams userNameTextInstructionDetails;
         userNameTextInstructionDetails = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
@@ -97,7 +97,7 @@ public class MainActivity extends ActionBarActivity {
 
         userNameInput.setWidth(px);
 
-        //TextView Above
+        //TextView
         userNameTextInstructionDetails.addRule(RelativeLayout.ABOVE, userNameInput.getId());
         userNameTextInstructionDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
         userNameTextInstructionDetails.setMargins(0,0,0,50);
@@ -121,10 +121,10 @@ public class MainActivity extends ActionBarActivity {
             //adds Button to layout
         mainLayout.addView(userNameInputButton, userNameInputButtonDetails);
 
-            //add EditText to layout
+            //adds TextView to layout
         mainLayout.addView(userNamePrinted, userNameTextPrintedDetails);
 
-        //Set this activates
+        //Sets this as active layout
         setContentView(mainLayout);
 
         //Intents
@@ -139,15 +139,9 @@ public class MainActivity extends ActionBarActivity {
             new Button.OnClickListener() {
                 public void onClick(View view) {
                     moveToWelcome();
-
-
                     //userNamePrinted.setText(userNameInput.getText().toString());
                 }
-
-
-
         });
-
     }
 
     private void moveToWelcome() {

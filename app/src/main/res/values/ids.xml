@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    //MainActivity
     <item name="userNameInputButton" type="id" />
     <item name="userNameInput" type="id" />
     <item name="userNameTextInstruction" type="id" />
-    <item name="userNamePrinted" type="id" />
 
+    //WelcomeActivity
+    <item name="continueButton" type="id" />
+    <item name="backButton" type="id" />
+    <item name="userNamePrinted" type="id" />
 </resources>

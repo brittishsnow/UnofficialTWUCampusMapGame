@@ -1,11 +1,17 @@
 <resources>
+    //App
     <string name="app_name">TWU Campus Map Game</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="action_settings">Settings</string>
 
+    //MainActivity
+    <string name="title_activity_main">MainActivity</string>
     <string name="userNameInputButtonText">Confirm</string>
     <string name="userNameTextInstructionText">Please enter a name to be used for the app.</string>
+
+    //Welcome Activity
     <string name="title_activity_welcome">Welcome</string>
+    <string name="continueButtonText">Continue</string>
+    <string name="backButtonText">Back</string>
+    <string name="action_settings">Settings</string>
 
 
 </resources>
