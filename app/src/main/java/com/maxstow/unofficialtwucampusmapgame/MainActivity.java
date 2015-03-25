@@ -38,15 +38,10 @@ public class MainActivity extends ActionBarActivity {
         userNameTextInstruction = new TextView(this);
         userNameTextInstruction.setText(getString(R.string.userNameTextInstructionText));
 
-        //Username text printout
-        final TextView userNamePrinted;
-        userNamePrinted = new TextView(this);
-
         //Id allocation from id values given in the ids xml file
         userNameInputButton.setId(R.id.userNameInputButton);
         userNameInput.setId(R.id.userNameInput);
         userNameTextInstruction.setId(R.id.userNameTextInstruction);
-        userNamePrinted.setId(R.id.userNamePrinted);
 
         //Details on the formatting of the Button
         RelativeLayout.LayoutParams userNameInputButtonDetails;
@@ -65,13 +60,6 @@ public class MainActivity extends ActionBarActivity {
         //Details on the formatting of the TextView
         RelativeLayout.LayoutParams userNameTextInstructionDetails;
         userNameTextInstructionDetails = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.WRAP_CONTENT,
-                RelativeLayout.LayoutParams.WRAP_CONTENT
-        );
-
-        //Details on the formatting of the TextView Below
-        RelativeLayout.LayoutParams userNameTextPrintedDetails;
-        userNameTextPrintedDetails = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT
         );
@@ -103,13 +91,6 @@ public class MainActivity extends ActionBarActivity {
         userNameTextInstructionDetails.setMargins(0,0,0,50);
         userNameTextInstructionDetails.addRule(RelativeLayout.CENTER_VERTICAL);
 
-        //TextView Below
-        userNameTextPrintedDetails.addRule(RelativeLayout.BELOW, userNameInputButton.getId());
-        userNameTextPrintedDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        userNameTextPrintedDetails.setMargins(200, 0, 0, 0);
-        userNameTextPrintedDetails.addRule(RelativeLayout.CENTER_VERTICAL);
-
-
         //Add widget to the layout(button is now a child of the layout)
 
             //adds TextView to layout
@@ -120,9 +101,6 @@ public class MainActivity extends ActionBarActivity {
 
             //adds Button to layout
         mainLayout.addView(userNameInputButton, userNameInputButtonDetails);
-
-            //adds TextView to layout
-        mainLayout.addView(userNamePrinted, userNameTextPrintedDetails);
 
         //Sets this as active layout
         setContentView(mainLayout);
@@ -139,7 +117,6 @@ public class MainActivity extends ActionBarActivity {
             new Button.OnClickListener() {
                 public void onClick(View view) {
                     moveToWelcome();
-                    //userNamePrinted.setText(userNameInput.getText().toString());
                 }
         });
     }

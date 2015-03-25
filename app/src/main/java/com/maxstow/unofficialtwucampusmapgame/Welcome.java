@@ -1,7 +1,6 @@
 package com.maxstow.unofficialtwucampusmapgame;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -64,14 +63,13 @@ public class Welcome extends ActionBarActivity {
         );
 
         //Button continueButton
-        continueButtonDetails.addRule(RelativeLayout.ABOVE, backButton.getId());
+        continueButtonDetails.addRule(RelativeLayout.BELOW, backButton.getId());
         continueButtonDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
         continueButtonDetails.addRule(RelativeLayout.ALIGN_BOTTOM);
 
-
         //Button backButton
         backButtonDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        backButtonDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        backButtonDetails.setMargins(0,0,0,50);
 
         //TextView userNameTextPrinted
         userNameTextPrintedDetails.addRule(RelativeLayout.CENTER_VERTICAL);
@@ -102,7 +100,6 @@ public class Welcome extends ActionBarActivity {
                 new Button.OnClickListener() {
                     public void onClick(View view) {
                         moveToMain();
-                        //userNamePrinted.setText(userNameInput.getText().toString());
                     }
                 });
     }
