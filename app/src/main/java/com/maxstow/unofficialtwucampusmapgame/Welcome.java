@@ -45,14 +45,14 @@ public class Welcome extends ActionBarActivity {
         //Details on the formatting of the Button
         RelativeLayout.LayoutParams continueButtonDetails;
         continueButtonDetails = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.FILL_PARENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT
         );
 
         //Details on the formatting of the Button
         RelativeLayout.LayoutParams backButtonDetails;
         backButtonDetails = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.FILL_PARENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT
         );
 
@@ -64,19 +64,19 @@ public class Welcome extends ActionBarActivity {
         );
 
         //Button continueButton
+        continueButtonDetails.addRule(RelativeLayout.ABOVE, backButton.getId());
         continueButtonDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        continueButtonDetails.addRule(RelativeLayout.CENTER_VERTICAL);
+        continueButtonDetails.addRule(RelativeLayout.ALIGN_BOTTOM);
+
 
         //Button backButton
         backButtonDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
         backButtonDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        backButtonDetails.setMargins(50,0,0,0);
 
         //TextView userNameTextPrinted
-        userNameTextPrintedDetails.addRule(RelativeLayout.ABOVE, continueButton.getId());
-        userNameTextPrintedDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        userNameTextPrintedDetails.setMargins(0,50,0,0);
         userNameTextPrintedDetails.addRule(RelativeLayout.CENTER_VERTICAL);
+        userNameTextPrintedDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        userNameTextPrintedDetails.setMargins(50,50,0,0);
 
         //adds Button to layout
         welcomeLayout.addView(continueButton, continueButtonDetails);
@@ -90,6 +90,13 @@ public class Welcome extends ActionBarActivity {
         //Sets this as active layout
         setContentView(welcomeLayout);
 
+        Bundle mainData = getIntent().getExtras();
+        if (mainData == null) {
+            return;
+        }
+        String mainMessage = mainData.getString("mainMessage");
+        userNamePrinted.setText(mainMessage);
+
         //Make the button listen for a click
         backButton.setOnClickListener(
                 new Button.OnClickListener() {
@@ -98,13 +105,9 @@ public class Welcome extends ActionBarActivity {
                         //userNamePrinted.setText(userNameInput.getText().toString());
                     }
                 });
-
     }
-
     private void moveToMain() {
         Intent buttonIntent = new Intent(this, MainActivity.class);
         startActivity(buttonIntent);
     }
-
-
 }

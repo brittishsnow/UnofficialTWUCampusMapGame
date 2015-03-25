@@ -146,6 +146,13 @@ public class MainActivity extends ActionBarActivity {
 
     private void moveToWelcome() {
             Intent buttonIntent = new Intent(this, Welcome.class);
+
+            final EditText userNameInput = (EditText) findViewById(R.id.userNameInput);
+            String userMessage = userNameInput.getText().toString();
+            buttonIntent.putExtra("mainMessage", userMessage);
+
             startActivity(buttonIntent);
+
+
     }
 }
