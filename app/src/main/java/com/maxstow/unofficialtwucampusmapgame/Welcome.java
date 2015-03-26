@@ -27,10 +27,10 @@ public class Welcome extends ActionBarActivity {
         continueButton.setBackgroundColor(Color.LTGRAY);
 
         //Button
-        Button backButton;
-        backButton = new Button(this);
-        backButton.setText(getString(R.string.backButtonText));
-        backButton.setBackgroundColor(Color.LTGRAY);
+        Button backWelcomeButton;
+        backWelcomeButton = new Button(this);
+        backWelcomeButton.setText(getString(R.string.backButtonText));
+        backWelcomeButton.setBackgroundColor(Color.LTGRAY);
 
         //Username text printout
         final TextView userNamePrinted;
@@ -39,7 +39,7 @@ public class Welcome extends ActionBarActivity {
 
         //Id allocation from id values given in the ids xml file
         continueButton.setId(R.id.continueButton);
-        backButton.setId(R.id.backButton);
+        backWelcomeButton.setId(R.id.backWelcomeButton);
         userNamePrinted.setId(R.id.userNamePrinted);
 
         //Details on the formatting of the Button
@@ -50,8 +50,8 @@ public class Welcome extends ActionBarActivity {
         );
 
         //Details on the formatting of the Button
-        RelativeLayout.LayoutParams backButtonDetails;
-        backButtonDetails = new RelativeLayout.LayoutParams(
+        RelativeLayout.LayoutParams backWelcomeButtonDetails;
+        backWelcomeButtonDetails = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT
         );
@@ -68,9 +68,9 @@ public class Welcome extends ActionBarActivity {
         continueButtonDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
 
         //Button backButton
-        backButtonDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        backButtonDetails.addRule(RelativeLayout.LEFT_OF, continueButton.getId());
-        backButtonDetails.setMargins(0,0,50,0);
+        backWelcomeButtonDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
+        backWelcomeButtonDetails.addRule(RelativeLayout.LEFT_OF, continueButton.getId());
+        backWelcomeButtonDetails.setMargins(0,0,50,0);
 
         //TextView userNameTextPrinted
         userNameTextPrintedDetails.addRule(RelativeLayout.CENTER_VERTICAL);
@@ -81,7 +81,7 @@ public class Welcome extends ActionBarActivity {
         welcomeLayout.addView(continueButton, continueButtonDetails);
 
         //adds Button to layout
-        welcomeLayout.addView(backButton, backButtonDetails);
+        welcomeLayout.addView(backWelcomeButton, backWelcomeButtonDetails);
 
         //adds TextView to layout
         welcomeLayout.addView(userNamePrinted, userNameTextPrintedDetails);
@@ -95,15 +95,36 @@ public class Welcome extends ActionBarActivity {
         }
         String mainMessage = mainData.getString("mainMessage");
         userNamePrinted.setText(mainMessage);
+        //Make the button listen for a click
+        continueButton.setOnClickListener(
+                new Button.OnClickListener() {
+                    public void onClick(View view) {
+                        moveToStartGame();
+                    }
+                });
+
 
         //Make the button listen for a click
-        backButton.setOnClickListener(
+        backWelcomeButton.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View view) {
                         moveToMain();
                     }
                 });
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+
+    }
+
+    private void moveToStartGame() {
+        Intent buttonIntent = new Intent(this, StartGame.class);
+        startActivity(buttonIntent);
+    }
+
     private void moveToMain() {
         Intent buttonIntent = new Intent(this, MainActivity.class);
         startActivity(buttonIntent);

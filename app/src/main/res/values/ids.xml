@@ -8,6 +8,12 @@
 
     //WelcomeActivity
     <item name="continueButton" type="id" />
-    <item name="backButton" type="id" />
+    <item name="backWelcomeButton" type="id" />
     <item name="userNamePrinted" type="id" />
+
+    //StartGameActivity
+    <item name="backStartGameButton" type="id">backStartGameButton</item>
+    <item name="startGameButton" type="id">startGameButton</item>
+    <item name="startGameText" type="id">startGameText</item>
+
 </resources>
