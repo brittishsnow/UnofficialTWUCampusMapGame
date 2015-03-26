@@ -18,7 +18,7 @@ public class Welcome extends ActionBarActivity {
         //Layout
         RelativeLayout welcomeLayout;
         welcomeLayout = new RelativeLayout(this);
-        welcomeLayout.setBackgroundColor(Color.GRAY);
+        welcomeLayout.setBackgroundColor(Color.DKGRAY);
 
         //Button
         Button continueButton;
@@ -35,6 +35,7 @@ public class Welcome extends ActionBarActivity {
         //Username text printout
         final TextView userNamePrinted;
         userNamePrinted = new TextView(this);
+        userNamePrinted.setTextColor(Color.WHITE);
 
         //Id allocation from id values given in the ids xml file
         continueButton.setId(R.id.continueButton);
@@ -44,14 +45,14 @@ public class Welcome extends ActionBarActivity {
         //Details on the formatting of the Button
         RelativeLayout.LayoutParams continueButtonDetails;
         continueButtonDetails = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.FILL_PARENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT
         );
 
         //Details on the formatting of the Button
         RelativeLayout.LayoutParams backButtonDetails;
         backButtonDetails = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.FILL_PARENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT
         );
 
@@ -63,13 +64,13 @@ public class Welcome extends ActionBarActivity {
         );
 
         //Button continueButton
-        continueButtonDetails.addRule(RelativeLayout.BELOW, backButton.getId());
+
         continueButtonDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        continueButtonDetails.addRule(RelativeLayout.ALIGN_BOTTOM);
 
         //Button backButton
         backButtonDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
-        backButtonDetails.setMargins(0,0,0,50);
+        backButtonDetails.addRule(RelativeLayout.LEFT_OF, continueButton.getId());
+        backButtonDetails.setMargins(0,0,50,0);
 
         //TextView userNameTextPrinted
         userNameTextPrintedDetails.addRule(RelativeLayout.CENTER_VERTICAL);

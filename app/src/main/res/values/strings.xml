@@ -12,6 +12,10 @@
     <string name="continueButtonText">Continue</string>
     <string name="backButtonText">Back</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_stat_game">StatGame</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_start_game">StartGame</string>
 
 
 </resources>

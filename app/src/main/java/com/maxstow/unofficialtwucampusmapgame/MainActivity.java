@@ -129,7 +129,5 @@ public class MainActivity extends ActionBarActivity {
             buttonIntent.putExtra("mainMessage", userMessage);
 
             startActivity(buttonIntent);
-
-
     }
 }
