@@ -113,13 +113,6 @@ public class Welcome extends ActionBarActivity {
                 });
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-
-    }
-
     private void moveToStartGame() {
         Intent buttonIntent = new Intent(this, StartGame.class);
         startActivity(buttonIntent);
