@@ -9,30 +9,43 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Continue"
-        android:id="@+id/button2"
+        android:text="@string/continueButtonText"
+        android:id="@+id/welcomeContinueButton"
         android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/welcomeText1"
+        android:id="@+id/welcomeText1"
+        android:textSize="17dp"
+        android:layout_marginBottom="30dp"
+        android:layout_above="@+id/welcomeText2"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="If the name is correct please press continue."
-        android:id="@+id/textView2"
+        android:text="@string/welcomeText2"
+        android:id="@+id/welcomeText2"
         android:textSize="17dp"
         android:layout_marginBottom="30dp"
-        android:layout_above="@+id/textView3"
+        android:layout_above="@+id/welcomeContinueButton"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="If not, go back to edit."
-        android:id="@+id/textView3"
-        android:textSize="17dp"
-        android:layout_marginBottom="30dp"
-        android:layout_above="@+id/button2"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/userNamePrinted"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/welcomeContinueButton"
+        android:layout_alignLeft="@+id/welcomeContinueButton"
+        android:layout_alignStart="@+id/welcomeContinueButton"
+        android:layout_alignRight="@+id/welcomeContinueButton"
+        android:layout_alignEnd="@+id/welcomeContinueButton" />
 </RelativeLayout>
