@@ -17,12 +17,6 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Intent intent = new Intent(this, DebugIntentService.class);
-        startService(intent);
-
-        Intent i = new Intent(this, DebugService.class);
-        startService(i);
     }
 
     public void onClick(View view) {

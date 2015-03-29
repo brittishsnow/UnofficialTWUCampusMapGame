@@ -6,13 +6,9 @@
         android:minSdkVersion="18"
         android:targetSdkVersion="21" />
 
-    <android:uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18" />
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -37,14 +33,6 @@
                 android:value="com.maxstow.unofficialtwucampusmapgame.MainActivity" />
         </activity>
         <activity
-            android:name=".StatGame"
-            android:label="@string/title_activity_stat_game"
-            android:parentActivityName=".Welcome" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.maxstow.unofficialtwucampusmapgame.Welcome" />
-        </activity>
-        <activity
             android:name=".StartGame"
             android:label="@string/title_activity_start_game"
             android:parentActivityName=".Welcome" >
@@ -53,5 +41,4 @@
                 android:value="com.maxstow.unofficialtwucampusmapgame.Welcome" />
         </activity>
     </application>
-
 </manifest>
