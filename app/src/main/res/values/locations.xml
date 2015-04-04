@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    //CANIL Harbest Centre
+    <locations name="canil_harvest_centre_longitude"></locations>
+    <locations name="canil_harvest_centre_latitude"></locations>
+
+    //David E. Enarson Gym
+    <locations name="gym_longitude"></locations>
+    <locations name="gym_latiitude"></locations>
+
+    //Douglas Centre
+    <locations name="douglas_centre_longitude"></locations>
+    <locations name="douglas_centre_latitude"></locations>
+
+    //Douglas Hall
+    <locations name="douglas_hall_longitude"></locations>
+    <locations name="douglas_hall_latitude"></locations>
+
+    //Ezra House
+    <locations name="ezra_house_longitude"></locations>
+    <locations name="ezra_house_latitude"></locations>
+
+    //Fosmark Centre
+    <locations name="fosmark_centre_longitude"></locations>
+    <locations name="fosmark_centre_latitude"></locations>
+
+    //Fraser Hall
+    <locations name="fraser_hall_longitude"></locations>
+    <locations name="fraser_hall_latitude"></locations>
+
+    //Larsen Atrium
+    <locations name="atrium_longitude"></locations>
+    <locations name="atrium_latitude"></locations>
+
+    //Mattson Centre
+    <locations name="mattson_centre_longitude"></locations>
+    <locations name="mattson_centre_latitude"></locations>
+
+    //McMillan Hall
+    <locations name="mcmillan_hall_longitude"></locations>
+    <locations name="mcmillan_hall_latitude"></locations>
+
+    //Music Building
+    <locations name="music_building_longitude"></locations>
+    <locations name="music_building_latitude"></locations>
+
+    //Nefueld Science Centre
+    <locations name="neufeld_science_centre_longitude"></locations>
+    <locations name="neufeld_science_centre_latitude"></locations>
+
+    //Northwest Building
+    <locations name="northwest_building_longitude"></locations>
+    <locations name="northwest_building_latitude"></locations>
+
+    //Reimer Student Centre
+    <locations name="reimer_student_centre_longitude"></locations>
+    <locations name="reimer_student_centre_latitude"></locations>
+
+    //Robert N. Thompson Building
+    <locations name="rnt_building_longitude"></locations>
+    <locations name="rnt_building_latitude"></locations>
+
+    //Robson Hall
+    <locations name="robson_hall_longitude"></locations>
+    <locations name="robson_hall_latitude"></locations>
+
+    //Stanley Nelson Centre
+    <locations name="stanley_nelson_centre_longitude"></locations>
+    <locations name="stanley_nelson_centre_latitude"></locations>
+
+    //Vernon Strombeck Centre
+    <locations name="vernon_strombeck_centre_longitude"></locations>
+    <locations name="vernon_strombeck_centre_latitude"></locations>
+
+    //Welcome Centre
+    <locations name="welcome_centre_longitude"></locations>
+    <locations name="welcome_centre_latitude"></locations>
+
+</resources>

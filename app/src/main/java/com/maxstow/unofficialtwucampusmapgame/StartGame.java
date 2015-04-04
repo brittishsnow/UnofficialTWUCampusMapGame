@@ -45,10 +45,14 @@ public class StartGame extends Activity implements ConnectionCallbacks,
     private TextView lblLocation;
     private Button butttonShowLocation, buttonLocationUpdates;
 
+    private TextView longitudeValue;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_game);
+
+        longitudeValue = (TextView) findViewById(R.id.longitudeValue);
 
         lblLocation = (TextView) findViewById(R.id.lblLocation);
         butttonShowLocation = (Button) findViewById(R.id.butttonShowLocation);
@@ -59,7 +63,6 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
             // Building the GoogleApi client
             buildGoogleApiClient();
-
             createLocationRequest();
         }
 
@@ -69,6 +72,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
             @Override
             public void onClick(View v) {
                 displayLocation();
+
             }
         });
 
@@ -118,12 +122,31 @@ public class StartGame extends Activity implements ConnectionCallbacks,
     }
 
     /**
+     * Method to get longitude
+     */
+    public double getLongitudeValue() {
+        mLastLocation = LocationServices.FusedLocationApi
+                .getLastLocation(mGoogleApiClient);
+        double longitude = mLastLocation.getLongitude();
+        return longitude;
+    }
+    /**
+     * Method to get latitude
+     */
+    public double getLatitudeValue() {
+        mLastLocation = LocationServices.FusedLocationApi
+                .getLastLocation(mGoogleApiClient);
+        double latitude = mLastLocation.getLatitude();
+        return latitude;
+    }
+    /**
      * Method to display the location on UI
      * */
     private void displayLocation() {
 
         mLastLocation = LocationServices.FusedLocationApi
                 .getLastLocation(mGoogleApiClient);
+
 
         if (mLastLocation != null) {
             double latitude = mLastLocation.getLatitude();
@@ -136,6 +159,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
             lblLocation
                     .setText("(Couldn't get the location. Make sure location is enabled on the device)");
         }
+
     }
 
     /**
@@ -263,6 +287,8 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
         // Displaying the new location on UI
         displayLocation();
+        getLongitudeValue();
+        getLatitudeValue();
     }
 
 }
