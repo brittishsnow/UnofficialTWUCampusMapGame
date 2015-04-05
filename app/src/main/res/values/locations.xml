@@ -2,79 +2,79 @@
 <resources>
 
     //CANIL Harbest Centre
-    <locations name="canil_harvest_centre_longitude"></locations>
-    <locations name="canil_harvest_centre_latitude"></locations>
+    <string name="canil_harvest_centre_longitude"></string>
+    <string name="canil_harvest_centre_latitude"></string>
 
     //David E. Enarson Gym
-    <locations name="gym_longitude"></locations>
-    <locations name="gym_latiitude"></locations>
+    <string name="gym_longitude"></string>
+    <string name="gym_latiitude"></string>
 
     //Douglas Centre
-    <locations name="douglas_centre_longitude"></locations>
-    <locations name="douglas_centre_latitude"></locations>
+    <string name="douglas_centre_longitude"></string>
+    <string name="douglas_centre_latitude"></string>
 
     //Douglas Hall
-    <locations name="douglas_hall_longitude"></locations>
-    <locations name="douglas_hall_latitude"></locations>
+    <string name="douglas_hall_longitude"></string>
+    <string name="douglas_hall_latitude"></string>
 
     //Ezra House
-    <locations name="ezra_house_longitude"></locations>
-    <locations name="ezra_house_latitude"></locations>
+    <string name="ezra_house_longitude"></string>
+    <string name="ezra_house_latitude"></string>
 
     //Fosmark Centre
-    <locations name="fosmark_centre_longitude"></locations>
-    <locations name="fosmark_centre_latitude"></locations>
+    <string name="fosmark_centre_longitude"></string>
+    <string name="fosmark_centre_latitude"></string>
 
     //Fraser Hall
-    <locations name="fraser_hall_longitude"></locations>
-    <locations name="fraser_hall_latitude"></locations>
+    <string name="fraser_hall_longitude"></string>
+    <string name="fraser_hall_latitude"></string>
 
     //Larsen Atrium
-    <locations name="atrium_longitude"></locations>
-    <locations name="atrium_latitude"></locations>
+    <string name="atrium_longitude"></string>
+    <string name="atrium_latitude"></string>
 
     //Mattson Centre
-    <locations name="mattson_centre_longitude"></locations>
-    <locations name="mattson_centre_latitude"></locations>
+    <string name="mattson_centre_longitude"></string>
+    <string name="mattson_centre_latitude"></string>
 
     //McMillan Hall
-    <locations name="mcmillan_hall_longitude"></locations>
-    <locations name="mcmillan_hall_latitude"></locations>
+    <string name="mcmillan_hall_longitude"></string>
+    <string name="mcmillan_hall_latitude"></string>
 
     //Music Building
-    <locations name="music_building_longitude"></locations>
-    <locations name="music_building_latitude"></locations>
+    <string name="music_building_longitude"></string>
+    <string name="music_building_latitude"></string>
 
     //Nefueld Science Centre
-    <locations name="neufeld_science_centre_longitude"></locations>
-    <locations name="neufeld_science_centre_latitude"></locations>
+    <string name="neufeld_science_centre_longitude"></string>
+    <string name="neufeld_science_centre_latitude"></string>
 
     //Northwest Building
-    <locations name="northwest_building_longitude"></locations>
-    <locations name="northwest_building_latitude"></locations>
+    <string name="northwest_building_longitude"></string>
+    <string name="northwest_building_latitude"></string>
 
     //Reimer Student Centre
-    <locations name="reimer_student_centre_longitude"></locations>
-    <locations name="reimer_student_centre_latitude"></locations>
+    <string name="reimer_student_centre_longitude"></string>
+    <string name="reimer_student_centre_latitude"></string>
 
     //Robert N. Thompson Building
-    <locations name="rnt_building_longitude"></locations>
-    <locations name="rnt_building_latitude"></locations>
+    <string name="rnt_building_longitude"></string>
+    <string name="rnt_building_latitude"></string>
 
     //Robson Hall
-    <locations name="robson_hall_longitude"></locations>
-    <locations name="robson_hall_latitude"></locations>
+    <string name="robson_hall_longitude"></string>
+    <string name="robson_hall_latitude"></string>
 
     //Stanley Nelson Centre
-    <locations name="stanley_nelson_centre_longitude"></locations>
-    <locations name="stanley_nelson_centre_latitude"></locations>
+    <string name="stanley_nelson_centre_longitude"></string>
+    <string name="stanley_nelson_centre_latitude"></string>
 
     //Vernon Strombeck Centre
-    <locations name="vernon_strombeck_centre_longitude"></locations>
-    <locations name="vernon_strombeck_centre_latitude"></locations>
+    <string name="vernon_strombeck_centre_longitude"></string>
+    <string name="vernon_strombeck_centre_latitude"></string>
 
     //Welcome Centre
-    <locations name="welcome_centre_longitude"></locations>
-    <locations name="welcome_centre_latitude"></locations>
+    <string name="welcome_centre_longitude"></string>
+    <string name="welcome_centre_latitude"></string>
 
 </resources>

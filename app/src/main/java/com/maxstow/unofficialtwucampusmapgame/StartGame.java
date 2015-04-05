@@ -37,47 +37,43 @@ public class StartGame extends Activity implements ConnectionCallbacks,
     private LocationRequest mLocationRequest;
 
     // Location updates intervals in sec
-    private static int UPDATE_INTERVAL = 3000; // 3 sec
-    private static int FATEST_INTERVAL = 1000; // 1 sec
+    private static int UPDATE_INTERVAL = 100; // 0.1 sec
+    private static int FATEST_INTERVAL = 500; // 0.5 sec
     private static int DISPLACEMENT = 1; // 1 meter
 
     // UI elements
     private TextView lblLocation;
-    private Button butttonShowLocation, buttonLocationUpdates;
-
-    private TextView longitudeValue;
+    private Button btnShowLocation, btnStartLocationUpdates;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_game);
 
-        longitudeValue = (TextView) findViewById(R.id.longitudeValue);
-
         lblLocation = (TextView) findViewById(R.id.lblLocation);
-        butttonShowLocation = (Button) findViewById(R.id.butttonShowLocation);
-        buttonLocationUpdates = (Button) findViewById(R.id.buttonLocationUpdates);
+        btnShowLocation = (Button) findViewById(R.id.butttonShowLocation);
+        btnStartLocationUpdates = (Button) findViewById(R.id.buttonLocationUpdates);
 
         // First we need to check availability of play services
         if (checkPlayServices()) {
 
             // Building the GoogleApi client
             buildGoogleApiClient();
+
             createLocationRequest();
         }
 
         // Show location button click listener
-        butttonShowLocation.setOnClickListener(new View.OnClickListener() {
+        btnShowLocation.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 displayLocation();
-
             }
         });
 
         // Toggling the periodic location updates
-        buttonLocationUpdates.setOnClickListener(new View.OnClickListener() {
+        btnStartLocationUpdates.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -122,31 +118,12 @@ public class StartGame extends Activity implements ConnectionCallbacks,
     }
 
     /**
-     * Method to get longitude
-     */
-    public double getLongitudeValue() {
-        mLastLocation = LocationServices.FusedLocationApi
-                .getLastLocation(mGoogleApiClient);
-        double longitude = mLastLocation.getLongitude();
-        return longitude;
-    }
-    /**
-     * Method to get latitude
-     */
-    public double getLatitudeValue() {
-        mLastLocation = LocationServices.FusedLocationApi
-                .getLastLocation(mGoogleApiClient);
-        double latitude = mLastLocation.getLatitude();
-        return latitude;
-    }
-    /**
      * Method to display the location on UI
      * */
     private void displayLocation() {
 
         mLastLocation = LocationServices.FusedLocationApi
                 .getLastLocation(mGoogleApiClient);
-
 
         if (mLastLocation != null) {
             double latitude = mLastLocation.getLatitude();
@@ -159,7 +136,6 @@ public class StartGame extends Activity implements ConnectionCallbacks,
             lblLocation
                     .setText("(Couldn't get the location. Make sure location is enabled on the device)");
         }
-
     }
 
     /**
@@ -168,7 +144,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
     private void togglePeriodicLocationUpdates() {
         if (!mRequestingLocationUpdates) {
             // Changing the button text
-            buttonLocationUpdates
+            btnStartLocationUpdates
                     .setText(getString(R.string.btn_stop_location_updates));
 
             mRequestingLocationUpdates = true;
@@ -180,7 +156,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
         } else {
             // Changing the button text
-            buttonLocationUpdates
+            btnStartLocationUpdates
                     .setText(getString(R.string.btn_start_location_updates));
 
             mRequestingLocationUpdates = false;
@@ -287,8 +263,6 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
         // Displaying the new location on UI
         displayLocation();
-        getLongitudeValue();
-        getLatitudeValue();
     }
 
 }
