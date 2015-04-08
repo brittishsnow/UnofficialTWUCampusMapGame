@@ -22,6 +22,8 @@ import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 
+import java.util.ArrayList;
+
 public class StartGame extends Activity implements ConnectionCallbacks,
         OnConnectionFailedListener, LocationListener {
 
@@ -284,5 +286,24 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
         // Displaying the new location on UI
         displayLocation();
+    }
+    public static ArrayList<LocationObject> populateLocationData() {
+
+        ArrayList<LocationObject> locationArray = new ArrayList<>();
+
+        locationArray.add(new LocationObject(name, latitude, longitude));
+        locationArray.add(new LocationObject(name, latitude, longitude));
+        locationArray.add(new LocationObject(name, latitude, longitude));
+        locationArray.add(new LocationObject(name, latitude, longitude));
+        locationArray.add(new LocationObject(name, latitude, longitude));
+        locationArray.add(new LocationObject(name, latitude, longitude));
+        locationArray.add(new LocationObject(name, latitude, longitude));
+        locationArray.add(new LocationObject(name, latitude, longitude));
+        locationArray.add(new LocationObject(name, latitude, longitude));
+        locationArray.add(new LocationObject(name, latitude, longitude));
+        locationArray.add(new LocationObject(name, latitude, longitude));
+        locationArray.add(new LocationObject(name, latitude, longitude));
+
+        return locationArray;
     }
 }

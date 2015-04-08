@@ -2,18 +2,22 @@
 <resources>
 
     //CANIL Harbest Centre
+    <string name="canil_harvest_centre">CANIL Harbest Centre</string>
     <string name="canil_harvest_centre_longitude">-122.596444</string>
     <string name="canil_harvest_centre_latitude">49.139901</string>
 
     //David E. Enarson Gym
+    <string name="gym">David E. Enarson Gym</string>
     <string name="gym_longitude">-122.597380</string>
     <string name="gym_latiitude">49.141383</string>
 
     //Douglas Centre
+    <string name="douglas_centre">Douglas Centre</string>
     <string name="douglas_centre_longitude">-122.600496</string>
     <string name="douglas_centre_latitude">49.140162</string>
 
     //Douglas Hall
+    <string name="douglas_hall">Douglas Hall</string>
     <string name="douglas_hall_longitude">-122.600813</string>
     <string name="douglas_hall_latitude">49.139861</string>
 
