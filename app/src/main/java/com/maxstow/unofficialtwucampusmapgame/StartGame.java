@@ -1,7 +1,11 @@
 package com.maxstow.unofficialtwucampusmapgame;
 
 import android.app.Activity;
+import android.content.Context;
+import android.location.Criteria;
+import android.location.GpsSatellite;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +21,23 @@ import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListe
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.math.BigDecimal;
 
 public class StartGame extends Activity implements ConnectionCallbacks,
         OnConnectionFailedListener, LocationListener {
@@ -119,15 +140,31 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
     /**
      * Method to display the location on UI
-     * */
+     */
     private void displayLocation() {
 
-        mLastLocation = LocationServices.FusedLocationApi
-                .getLastLocation(mGoogleApiClient);
+        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+        LocationManager aLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        Criteria c = new Criteria();
+        c.setAccuracy(Criteria.ACCURACY_FINE);
+        String providerName = aLocationManager.getBestProvider(c, true);
 
+        double atrium_longitude = R.string.atrium_longitude;
+        double atrium_latitude = R.string.atrium_latitude;
+
+        Location atrium = new Location(providerName);
+        atrium.setLatitude(atrium_latitude);
+        atrium.setLongitude(atrium_longitude);
+
+
+        double latitude;
+        double longitude;
         if (mLastLocation != null) {
-            double latitude = mLastLocation.getLatitude();
-            double longitude = mLastLocation.getLongitude();
+
+            latitude = mLastLocation.getLatitude();
+            longitude = mLastLocation.getLongitude();
+
+
 
             lblLocation.setText(latitude + ", " + longitude);
 
@@ -136,11 +173,12 @@ public class StartGame extends Activity implements ConnectionCallbacks,
             lblLocation
                     .setText("(Couldn't get the location. Make sure location is enabled on the device)");
         }
+
     }
 
     /**
      * Method to toggle periodic location updates
-     * */
+     */
     private void togglePeriodicLocationUpdates() {
         if (!mRequestingLocationUpdates) {
             // Changing the button text
@@ -170,7 +208,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
     /**
      * Creating google api client object
-     * */
+     */
     protected synchronized void buildGoogleApiClient() {
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
@@ -180,7 +218,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
     /**
      * Creating location request object
-     * */
+     */
     protected void createLocationRequest() {
         mLocationRequest = new LocationRequest();
         mLocationRequest.setInterval(UPDATE_INTERVAL);
@@ -191,7 +229,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
     /**
      * Method to verify google play services on the device
-     * */
+     */
     private boolean checkPlayServices() {
         int resultCode = GooglePlayServicesUtil
                 .isGooglePlayServicesAvailable(this);
@@ -212,7 +250,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
     /**
      * Starting the location updates
-     * */
+     */
     protected void startLocationUpdates() {
 
         LocationServices.FusedLocationApi.requestLocationUpdates(
@@ -264,5 +302,4 @@ public class StartGame extends Activity implements ConnectionCallbacks,
         // Displaying the new location on UI
         displayLocation();
     }
-
 }

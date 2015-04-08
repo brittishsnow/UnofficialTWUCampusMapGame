@@ -30,8 +30,8 @@
     <string name="fraser_hall_latitude"></string>
 
     //Larsen Atrium
-    <string name="atrium_longitude"></string>
-    <string name="atrium_latitude"></string>
+    <string name="atrium_longitude">-122.6078622</string>
+    <string name="atrium_latitude">49.170241</string>
 
     //Mattson Centre
     <string name="mattson_centre_longitude"></string>
@@ -54,8 +54,8 @@
     <string name="northwest_building_latitude"></string>
 
     //Reimer Student Centre
-    <string name="reimer_student_centre_longitude"></string>
-    <string name="reimer_student_centre_latitude"></string>
+    <string name="reimer_student_centre_longitude">-122.600600</string>
+    <string name="reimer_student_centre_latitude">49.140776</string>
 
     //Robert N. Thompson Building
     <string name="rnt_building_longitude"></string>
