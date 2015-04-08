@@ -66,6 +66,10 @@ public class StartGame extends Activity implements ConnectionCallbacks,
     private TextView lblLocation;
     private Button btnShowLocation, btnStartLocationUpdates;
 
+    //Database elements
+    DatabaseHandler dbHandler;
+    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
