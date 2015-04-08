@@ -22,62 +22,77 @@
     <string name="douglas_hall_latitude">49.139861</string>
 
     //Ezra House
+    <string name="ezra_house">Ezra House</string>
     <string name="ezra_house_longitude">-122.599627</string>
     <string name="ezra_house_latitude">49.139995</string>
 
     //Fosmark Centre
+    <string name="fosmark_centre">Fosmark Centre</string>
     <string name="fosmark_centre_longitude">-122.596666</string>
     <string name="fosmark_centre_latitude">49.140201</string>
 
     //Fraser Hall
+    <string name="fraser_hall">Fraser Hall</string>
     <string name="fraser_hall_longitude">-122.598774</string>
     <string name="fraser_hall_latitude">49.140837</string>
 
     //Gym Portable
+    <string name="gym_portable">Gym Portable</string>
     <string name="gym_portable_longitude">-122.597825</string>
     <string name="gym_portable_latitude">49.141040</string>
 
     //Larsen Atrium
+    <string name="atrium">Larsen Atrium</string>
     <string name="atrium_longitude">-122.601419</string>
     <string name="atrium_latitude">49.140455</string>
 
     //Mattson Centre
+    <string name="mattson_centre">Mattson Centre</string>
     <string name="mattson_centre_longitude">-122.600244</string>
     <string name="mattson_centre_latitude">49.141388</string>
 
     //McMillan Hall
+    <string name="mcmillan_hall">McMillan Hall</string>
     <string name="mcmillan_hall_longitude">-122.599445</string>
     <string name="mcmillan_hall_latitude">49.141050</string>
 
     //Music Building
+    <string name="music_building">Music Building</string>
     <string name="music_building_longitude">-122.603289</string>
     <string name="music_building_latitude">49.139276</string>
 
     //Nefueld Science Centre
+    <string name="neufeld_science_centre">Neufeld Science Centre</string>
     <string name="neufeld_science_centre_longitude">-122.603951</string>
     <string name="neufeld_science_centre_latitude">49.140030</string>
 
     //Northwest Building
+    <string name="northwest_building">Northwest Building</string>
     <string name="northwest_building_longitude">-122.595781</string>
     <string name="northwest_building_latitude">49.140849</string>
 
     //Reimer Student Centre
+    <string name="reimer_student_centre">Reimer Student Centre</string>
     <string name="reimer_student_centre_longitude">-122.600837</string>
     <string name="reimer_student_centre_latitude">49.140817</string>
 
     //Robert N. Thompson Building
+    <string name="rnt_building">Robert N. Thompson Building</string>
     <string name="rnt_building_longitude">-122.601998</string>
     <string name="rnt_building_latitude">49.139777</string>
 
     //Robson Hall
+    <string name="robson_hall">Robson Hall</string>
     <string name="robson_hall_longitude">-122.599732</string>
     <string name="robson_hall_latitude">49.140316</string>
 
     //Vernon Strombeck Centre
+    <string name="vernon_strombeck_cetnre">Vernon Strombeck Centre</string>
     <string name="vernon_strombeck_centre_longitude">-122.605327</string>
     <string name="vernon_strombeck_centre_latitude">49.139435</string>
 
     //Welcome Centre
+    <string name="welcome_centre">Welcome Centre</string>
     <string name="welcome_centre_longitude">-122.600987</string>
     <string name="welcome_centre_latitude">49.141827</string>
 

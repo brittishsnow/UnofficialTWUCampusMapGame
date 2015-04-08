@@ -60,6 +60,9 @@ public class StartGame extends Activity implements ConnectionCallbacks,
         btnShowLocation = (Button) findViewById(R.id.butttonShowLocation);
         btnStartLocationUpdates = (Button) findViewById(R.id.buttonLocationUpdates);
 
+        ArrayList<LocationObject> locationObjectArrayList = populateLocationData();
+        LocationObject Canil = locationObjectArrayList.get(0);
+
         // First we need to check availability of play services
         if (checkPlayServices()) {
 
@@ -291,18 +294,8 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
         ArrayList<LocationObject> locationArray = new ArrayList<>();
 
-        locationArray.add(new LocationObject(name, latitude, longitude));
-        locationArray.add(new LocationObject(name, latitude, longitude));
-        locationArray.add(new LocationObject(name, latitude, longitude));
-        locationArray.add(new LocationObject(name, latitude, longitude));
-        locationArray.add(new LocationObject(name, latitude, longitude));
-        locationArray.add(new LocationObject(name, latitude, longitude));
-        locationArray.add(new LocationObject(name, latitude, longitude));
-        locationArray.add(new LocationObject(name, latitude, longitude));
-        locationArray.add(new LocationObject(name, latitude, longitude));
-        locationArray.add(new LocationObject(name, latitude, longitude));
-        locationArray.add(new LocationObject(name, latitude, longitude));
-        locationArray.add(new LocationObject(name, latitude, longitude));
+        String canil = String.valueOf((R.string.canil_harvest_centre));
+        locationArray.add(new LocationObject(canil, 49.139901, -122.596444));
 
         return locationArray;
     }
