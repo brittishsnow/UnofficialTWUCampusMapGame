@@ -294,8 +294,47 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
         ArrayList<LocationObject> locationArray = new ArrayList<>();
 
-        String canil = String.valueOf((R.string.canil_harvest_centre));
-        locationArray.add(new LocationObject(canil, 49.139901, -122.596444));
+        //In alphabetical order according to string value
+        String canil_harvest_centre = String.valueOf((R.string.canil_harvest_centre));
+        String gym = String.valueOf(R.string.gym);
+        String douglas_centre = String.valueOf(R.string.douglas_centre);
+        String douglas_hall = String.valueOf(R.string.douglas_hall);
+        String ezra_house = String.valueOf(R.string.ezra_house);
+        String fosmark_centre = String.valueOf(R.string.fosmark_centre);
+        String fraser_hall = String.valueOf(R.string.fraser_hall);
+        String gym_portable = String.valueOf(R.string.gym_portable);
+        String atrium = String.valueOf(R.string.atrium);
+        String mattson_centre = String.valueOf(R.string.mattson_centre);
+        String mcmillan_hall = String.valueOf(R.string.mcmillan_hall);
+        String music_building = String.valueOf(R.string.music_building);
+        String neufeld_science_centre = String.valueOf(R.string.neufeld_science_centre);
+        String northwest_building = String.valueOf(R.string.northwest_building);
+        String reimer_student_centre = String.valueOf(R.string.reimer_student_centre);
+        String rnt_building = String.valueOf(R.string.rnt_building);
+        String robson_hall = String.valueOf(R.string.robson_hall);
+        String vernon_strombeck_cetnre = String.valueOf(R.string.vernon_strombeck_cetnre);
+        String welcome_centre = String.valueOf(R.string.welcome_centre);
+
+        locationArray.add(new LocationObject(canil_harvest_centre, 49.139901, -122.596444));
+        locationArray.add(new LocationObject(gym, 49.141383, -122.597380));
+        locationArray.add(new LocationObject(douglas_centre, 49.140162, -122.600496));
+        locationArray.add(new LocationObject(douglas_hall, 49.139861, -122.600813));
+        locationArray.add(new LocationObject(ezra_house, 49.139995, -122.599627));
+        locationArray.add(new LocationObject(fosmark_centre, 49.140201, -122.596666));
+        locationArray.add(new LocationObject(fraser_hall, 49.140837, -122.598774));
+        locationArray.add(new LocationObject(gym_portable, 49.141040, -122.597825));
+        locationArray.add(new LocationObject(atrium, 49.140455, -122.601419));
+        locationArray.add(new LocationObject(mattson_centre, 49.141388, -122.600244));
+        locationArray.add(new LocationObject(mcmillan_hall, 49.141050, -122.599445));
+        locationArray.add(new LocationObject(music_building, 49.139276, -122.603289));
+        locationArray.add(new LocationObject(neufeld_science_centre, 49.140030, -122.597380));
+        locationArray.add(new LocationObject(northwest_building, 49.140849, -122.595781));
+        locationArray.add(new LocationObject(reimer_student_centre, 49.140817, -122.600837));
+        locationArray.add(new LocationObject(rnt_building, 49.139777, -122.597380));
+        locationArray.add(new LocationObject(robson_hall, 49.140316, -122.599732));
+        locationArray.add(new LocationObject(vernon_strombeck_cetnre, 49.139435, -122.605327));
+        locationArray.add(new LocationObject(welcome_centre, 49.141827, -122.600987));
+
 
         return locationArray;
     }
