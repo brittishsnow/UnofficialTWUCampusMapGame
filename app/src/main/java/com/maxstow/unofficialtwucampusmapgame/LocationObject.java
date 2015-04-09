@@ -19,4 +19,16 @@ public class LocationObject {
         this.latitudeValue = latitudeValue;
         this.longitudeValue = longitudeValue;
     }
+
+    public String getBuildingName() {
+        return buildingName;
+    }
+
+    public double getLongitudeValue() {
+        return longitudeValue;
+    }
+
+    public double getLatitudeValue() {
+        return latitudeValue;
+    }
 }

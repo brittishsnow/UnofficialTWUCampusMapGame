@@ -60,8 +60,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
         btnShowLocation = (Button) findViewById(R.id.butttonShowLocation);
         btnStartLocationUpdates = (Button) findViewById(R.id.buttonLocationUpdates);
 
-        ArrayList<LocationObject> locationObjectArrayList = populateLocationData();
-        LocationObject Canil = locationObjectArrayList.get(0);
+
 
         // First we need to check availability of play services
         if (checkPlayServices()) {
@@ -137,12 +136,13 @@ public class StartGame extends Activity implements ConnectionCallbacks,
         c.setAccuracy(Criteria.ACCURACY_FINE);
         String providerName = aLocationManager.getBestProvider(c, true);
 
-        double atrium_longitude = R.string.atrium_longitude;
-        double atrium_latitude = R.string.atrium_latitude;
+        ArrayList<LocationObject> locationObjectArrayList = populateLocationData();
+        LocationObject Canil = locationObjectArrayList.get(0);
+        LocationObject Gym = locationObjectArrayList.get(1);
 
-        Location atrium = new Location(providerName);
-        atrium.setLatitude(atrium_latitude);
-        atrium.setLongitude(atrium_longitude);
+        double canil_longitude = Canil.getLongitudeValue();
+        double canil_latitude = Canil.getLatitudeValue();
+        String canil_Name = Canil.getBuildingName();
 
 
         double latitude;
@@ -337,5 +337,33 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
 
         return locationArray;
+    }
+    public static double calculateDistance(double latitude1, double longitude1, double latitude2, double longitude2, String buildingName) {
+        double toRad = (Math.PI/180);
+        //double latitude = gps.getLatitude();
+        //double longitude = gps.getLongitude();
+
+        //double latitude = 49.1702665;
+        //double longitude = -122.6078454;
+
+        double radius = 6371000;
+        double lat1 = latitude1 * toRad;
+        double lon1 = longitude1 * toRad;
+
+        double lat2 = latitude2 * toRad;
+        double lon2 = longitude2 * toRad;
+
+        double deltaLat = (latitude2 - latitude1) * toRad;
+        double deltaLon = (longitude2 - longitude1) * toRad;
+
+        double aHaversine = Math.sin(deltaLat/2) * Math.sin(deltaLat/2) +
+                Math.cos(lat1) * Math.cos(lat2) *
+                        Math.sin(deltaLon/2) * Math.sin(deltaLon/2);
+
+        double cHaversine = 2 * Math.atan2(Math.sqrt(aHaversine), Math.sqrt(1-aHaversine));
+
+        double distanceHaversine = radius * cHaversine;
+
+        return distanceHaversine;
     }
 }
