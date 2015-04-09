@@ -122,5 +122,8 @@
     <string name="welcome_centre">Welcome Centre</string>
     <string name="welcome_centre_longitude">-122.600987</string>
     <string name="welcome_centre_latitude">49.141827</string>
+    <string name="title_activity_field_trip">FieldTrip</string>
+
+    <string name="hello_world">Hello world!</string>
 
 </resources>

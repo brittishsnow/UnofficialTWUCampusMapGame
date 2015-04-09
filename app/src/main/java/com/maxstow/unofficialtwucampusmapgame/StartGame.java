@@ -22,6 +22,8 @@ import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 
 public class StartGame extends Activity implements ConnectionCallbacks,
@@ -97,6 +99,8 @@ public class StartGame extends Activity implements ConnectionCallbacks,
             @Override
             public void onClick(View v) {
                 displayLocation();
+
+
             }
         });
 
@@ -261,31 +265,31 @@ public class StartGame extends Activity implements ConnectionCallbacks,
             longitude = mLastLocation.getLongitude();
 
             double distanceTocanil_harvest_centre = calculateDistance( latitude, longitude, canil_harvest_centreLatitudeValue, canil_harvest_centreLongitudeValue);
-            String distanceTocanil_harvest_centreString = canil_harvest_centreBuildingName + ": " + distanceTocanil_harvest_centre;
+            String distanceTocanil_harvest_centreString = canil_harvest_centreBuildingName + ": " + round(distanceTocanil_harvest_centre, 2) + " meters" ;
 
             distance1.setText(distanceTocanil_harvest_centreString);
 
 
             double distanceTogym = calculateDistance( latitude, longitude, gymLatitudeValue, gymLongitudeValue);
-            String distanceTogymString = gymBuildingName + ": " + distanceTogym;
+            String distanceTogymString = gymBuildingName + ": " + round(distanceTogym, 2) + " meters" ;
 
             distance2.setText(distanceTogymString);
 
 
             double distanceTodouglas_centre = calculateDistance( latitude, longitude, douglas_centreLatitudeValue, douglas_centreLongitudeValue);
-            String distanceTodouglas_centreString = douglas_centreBuildingName + ": " + distanceTodouglas_centre;
+            String distanceTodouglas_centreString = douglas_centreBuildingName + ": " + round(distanceTodouglas_centre, 2) + " meters" ;
 
             distance3.setText(distanceTodouglas_centreString);
 
 
             double distanceTodouglas_hall = calculateDistance( latitude, longitude, douglas_hallLatitudeValue, douglas_hallLongitudeValue);
-            String distanceTodouglas_hallString = douglas_hallBuildingName + ": " + distanceTodouglas_hall;
+            String distanceTodouglas_hallString = douglas_hallBuildingName + ": " + round(distanceTodouglas_hall, 2) + " meters" ;
 
             distance4.setText(distanceTodouglas_hallString);
 
 
             double distanceToezra_house = calculateDistance( latitude, longitude, ezra_houseLatitudeValue, ezra_houseLongitudeValue);
-            String distanceToezra_houseString = ezra_houseBuildingName + ": " + distanceToezra_house;
+            String distanceToezra_houseString = ezra_houseBuildingName + ": " + round(distanceToezra_house, 2) + " meters" ;
 
             distance5.setText(distanceToezra_houseString);
 
@@ -294,79 +298,79 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
 
             double distanceTofraser_hall = calculateDistance( latitude, longitude, fraser_hallLatitudeValue, fraser_hallLongitudeValue);
-            String distanceTofraser_hallString = fraser_hallBuildingName + ": " + distanceTofraser_hall;
+            String distanceTofraser_hallString = fraser_hallBuildingName + ": " + round(distanceTofraser_hall, 2) + " meters" ;
 
             distance6.setText(distanceTofraser_hallString);
 
 
             double distanceTogym_portable = calculateDistance( latitude, longitude, gym_portableLatitudeValue, gym_portableLongitudeValue);
-            String distanceTogym_portableString = gym_portableBuildingName + ": " + distanceTogym_portable;
+            String distanceTogym_portableString = gym_portableBuildingName + ": " + round(distanceTogym_portable, 2) + " meters" ;
 
             distance7.setText(distanceTogym_portableString);
 
 
             double distanceToatrium = calculateDistance( latitude, longitude, atriumLatitudeValue, atriumLongitudeValue);
-            String distanceToatriumString = atriumBuildingName + ": " + distanceToatrium;
+            String distanceToatriumString = atriumBuildingName + ": " + round(distanceToatrium, 2) + " meters" ;
 
             distance8.setText(distanceToatriumString);
 
 
             double distanceTomattson_centre = calculateDistance( latitude, longitude, mattson_centreLatitudeValue, mattson_centreLongitudeValue);
-            String distanceTomattson_centreString = mattson_centreBuildingName + ": " + distanceTomattson_centre;
+            String distanceTomattson_centreString = mattson_centreBuildingName + ": " + round(distanceTomattson_centre, 2) + " meters" ;
 
             distance9.setText(distanceTomattson_centreString);
 
 
             double distanceTomcmillan_hall = calculateDistance( latitude, longitude, mcmillan_hallLatitudeValue, mcmillan_hallLongitudeValue);
-            String distanceTomcmillan_hallString = mcmillan_hallBuildingName + ": " + distanceTomcmillan_hall;
+            String distanceTomcmillan_hallString = mcmillan_hallBuildingName + ": " + round(distanceTomcmillan_hall, 2) + " meters" ;
 
             distance10.setText(distanceTomcmillan_hallString);
 
 
             double distanceTomusic_building = calculateDistance( latitude, longitude, music_buildingLatitudeValue, music_buildingLongitudeValue);
-            String distanceTomusic_buildingString = music_buildingBuildingName + ": " + distanceTomusic_building;
+            String distanceTomusic_buildingString = music_buildingBuildingName + ": " + round(distanceTomusic_building, 2) + " meters" ;
 
             distance11.setText(distanceTomusic_buildingString);
 
 
             double distanceToneufeld_science_centre = calculateDistance( latitude, longitude, neufeld_science_centreLatitudeValue, neufeld_science_centreLongitudeValue);
-            String distanceToneufeld_science_centreString = neufeld_science_centreBuildingName + ": " + distanceToneufeld_science_centre;
+            String distanceToneufeld_science_centreString = neufeld_science_centreBuildingName + ": " + round(distanceToneufeld_science_centre, 2) + " meters";
 
             distance12.setText(distanceToneufeld_science_centreString);
 
 
             double distanceTonorthwest_building = calculateDistance( latitude, longitude, northwest_buildingLatitudeValue, northwest_buildingLongitudeValue);
-            String distanceTonorthwest_buildingString = northwest_buildingBuildingName + ": " + distanceTonorthwest_building;
+            String distanceTonorthwest_buildingString = northwest_buildingBuildingName + ": " + round(distanceTonorthwest_building, 2) + " meters" ;
 
             distance13.setText(distanceTonorthwest_buildingString);
 
 
             double distanceToreimer_student_centre = calculateDistance( latitude, longitude, reimer_student_centreLatitudeValue, reimer_student_centreLongitudeValue);
-            String distanceToreimer_student_centreString = reimer_student_centreBuildingName + ": " + distanceToreimer_student_centre;
+            String distanceToreimer_student_centreString = reimer_student_centreBuildingName + ": " + round(distanceToreimer_student_centre, 2) + " meters" ;
 
             distance14.setText(distanceToreimer_student_centreString);
 
 
             double distanceTornt_building = calculateDistance( latitude, longitude, rnt_buildingLatitudeValue, rnt_buildingLongitudeValue);
-            String distanceTornt_buildingString = rnt_buildingBuildingName + ": " + distanceTornt_building;
+            String distanceTornt_buildingString = rnt_buildingBuildingName + ": " + round(distanceTornt_building, 2) + " meters" ;
 
             distance15.setText(distanceTornt_buildingString);
 
 
             double distanceTorobson_hall = calculateDistance( latitude, longitude, robson_hallLatitudeValue, robson_hallLongitudeValue);
-            String distanceTorobson_hallString = robson_hallBuildingName + ": " + distanceTorobson_hall;
+            String distanceTorobson_hallString = robson_hallBuildingName + ": " + round(distanceTorobson_hall, 2) + " meters" ;
 
             distance16.setText(distanceTorobson_hallString);
 
 
             double distanceTovernon_strombeck_cetnre = calculateDistance( latitude, longitude, vernon_strombeck_cetnreLatitudeValue, vernon_strombeck_cetnreLongitudeValue);
-            String distanceTovernon_strombeck_cetnreString = vernon_strombeck_cetnreBuildingName + ": " + distanceTovernon_strombeck_cetnre;
+            String distanceTovernon_strombeck_cetnreString = vernon_strombeck_cetnreBuildingName + ": " + round(distanceTovernon_strombeck_cetnre, 2) + " meters" ;
 
             distance17.setText(distanceTovernon_strombeck_cetnreString);
 
 
             double distanceTowelcome_centre = calculateDistance( latitude, longitude, welcome_centreLatitudeValue, welcome_centreLongitudeValue);
-            String distanceTowelcome_centreString = welcome_centreBuildingName + ": " + distanceTowelcome_centre;
+            String distanceTowelcome_centreString = welcome_centreBuildingName + ": " + round(distanceTowelcome_centre, 2) + " meters" ;
 
             distance18.setText(distanceTowelcome_centreString);
 
@@ -378,6 +382,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
             lblLocation
                     .setText("(Couldn't get the location. Make sure location is enabled on the device)");
         }
+
 
     }
 
@@ -582,5 +587,20 @@ public class StartGame extends Activity implements ConnectionCallbacks,
         double distanceHaversine = radius * cHaversine;
 
         return distanceHaversine;
+    }
+
+    /**
+     * For rounding decimal values
+     * found on StackOverflow: link http://stackoverflow.com/questions/2808535/round-a-double-to-2-decimal-places
+     * @param value
+     * @param places
+     * @return
+     */
+    public static double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        BigDecimal bd = new BigDecimal(value);
+        bd = bd.setScale(places, RoundingMode.HALF_UP);
+        return bd.doubleValue();
     }
 }
