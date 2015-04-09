@@ -14,6 +14,7 @@ public class ProximityReceiver extends BroadcastReceiver {
     private static final String TAG = "ProximityReceiver";
     private final Context context;
 
+
     public ProximityReceiver(Context context) {
         this.context = context;
     }
