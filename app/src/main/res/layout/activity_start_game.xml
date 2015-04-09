@@ -1,62 +1,195 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/view_bg"
-    android:gravity="center_horizontal"
-    android:orientation="vertical" >
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/distance"
-        android:layout_gravity="center_horizontal" />
-
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/marker" />
+        android:id="@+id/distance1"
+        android:layout_alignParentTop="true"
+        android:textSize="14dp"
+        android:layout_marginBottom="6dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="@string/lbl_you_are_at"
-        android:textColor="@color/white"
-        android:textSize="25dp"
-        android:textStyle="bold" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/distance2"
+        android:layout_below="@+id/distance1"
+        android:textSize="14dp"
+        android:layout_marginBottom="6dp" />
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/distance3"
+        android:layout_below="@+id/distance2"
+        android:textSize="14dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/distance4"
+        android:layout_below="@+id/distance3"
+        android:textSize="14dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/distance5"
+        android:layout_below="@+id/distance4"
+        android:textSize="14dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/distance6"
+        android:layout_below="@+id/distance5"
+        android:textSize="14dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/distance7"
+        android:layout_below="@+id/distance6"
+        android:textSize="14dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/distance8"
+        android:layout_below="@+id/distance7"
+        android:textSize="14dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/distance9"
+        android:layout_below="@+id/distance8"
+        android:textSize="14dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/distance10"
+        android:layout_below="@+id/distance9"
+        android:textSize="14dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/distance11"
+        android:layout_below="@+id/distance10"
+        android:textSize="14dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/distance12"
+        android:layout_below="@+id/distance11"
+        android:textSize="14dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/distance13"
+        android:layout_below="@+id/distance12"
+        android:textSize="14dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/distance14"
+        android:layout_below="@+id/distance13"
+        android:textSize="14dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/distance15"
+        android:layout_below="@+id/distance14"
+        android:textSize="14dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/distance16"
+        android:layout_below="@+id/distance15"
+        android:textSize="14dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/distance17"
+        android:layout_below="@+id/distance16"
+        android:textSize="14dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/distance18"
+        android:layout_below="@+id/distance17"
+        android:textSize="14dp"
+        android:layout_marginBottom="6dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:hint="longitude and latitude"
         android:id="@+id/lblLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:padding="15dp"
-        android:textColor="@color/white"
-        android:textSize="16dp" />
+        android:layout_below="@+id/distance18"
+        android:layout_centerHorizontal="true"/>
 
     <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
         android:id="@+id/butttonShowLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:background="@color/btn_bg"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:text="@string/btn_get_location"
-        android:textColor="@color/white" />
+        android:layout_below="@+id/lblLocation"
+        android:layout_centerHorizontal="true"/>
 
     <Button
-        android:id="@+id/buttonLocationUpdates"
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:background="@color/btn_bg"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:text="@string/btn_start_location_updates"
-        android:textColor="@color/white" />
-
-</LinearLayout>
+        android:text=""
+        android:id="@+id/buttonLocationUpdates"
+        android:layout_below="@+id/butttonShowLocation"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
