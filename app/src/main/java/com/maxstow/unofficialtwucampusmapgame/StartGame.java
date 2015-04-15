@@ -40,6 +40,23 @@ public class StartGame extends Activity implements ConnectionCallbacks,
     private LocationManager locMgr = null;
     PendingIntent pIntent1 = null;
     PendingIntent pIntent2 = null;
+    PendingIntent pIntent3 = null;
+    PendingIntent pIntent4 = null;
+    PendingIntent pIntent5 = null;
+    PendingIntent pIntent6 = null;
+    PendingIntent pIntent7 = null;
+    PendingIntent pIntent8 = null;
+    PendingIntent pIntent9 = null;
+    PendingIntent pIntent10 = null;
+    PendingIntent pIntent11 = null;
+    PendingIntent pIntent12 = null;
+    PendingIntent pIntent13 = null;
+    PendingIntent pIntent14 = null;
+    PendingIntent pIntent15 = null;
+    PendingIntent pIntent16 = null;
+    PendingIntent pIntent17 = null;
+    PendingIntent pIntent18 = null;
+    PendingIntent pIntent19 = null;
 
     // LogCat tag
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -577,13 +594,17 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
         return locationArray;
     }
+
+    /**
+     * A method to implement the Haversine formula from the site: http://www.movable-type.co.uk/scripts/latlong.html
+     * @param latitude1
+     * @param longitude1
+     * @param latitude2
+     * @param longitude2
+     * @return
+     */
     public static double calculateDistance(double latitude1, double longitude1, double latitude2, double longitude2) {
         double toRad = (Math.PI/180);
-        //double latitude = gps.getLatitude();
-        //double longitude = gps.getLongitude();
-
-        //double latitude = 49.1702665;
-        //double longitude = -122.6078454;
 
         double radius = 6371000;
         double lat1 = latitude1 * toRad;
@@ -631,6 +652,14 @@ public class StartGame extends Activity implements ConnectionCallbacks,
         String geo = "geo:" + lat + "," + lon;
         return geo;
     }
+
+    /**
+     * setup with the first proximity alert
+     * @param lat
+     * @param lon
+     * @param radius
+     * @param message
+     */
     public void setupProxAlert1(double lat, double lon, float radius, String message) {
         //Proximity Code
 
@@ -644,6 +673,14 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
         locMgr.addProximityAlert(lat,lon, radius, -1L, pIntent1);
     }
+
+    /**
+     * setup the second proximity alert
+     * @param lat
+     * @param lon
+     * @param radius
+     * @param message
+     */
     public void setupProxAlert2(double lat, double lon, float radius, String message) {
         //Proximity Code
 
@@ -657,6 +694,362 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
         locMgr.addProximityAlert(lat,lon, radius, -1L, pIntent2);
     }
+
+    /**
+     * setup the third proximity alert
+     * @param lat
+     * @param lon
+     * @param radius
+     * @param message
+     */
+    public void setupProxAlert3(double lat, double lon, float radius, String message) {
+        //Proximity Code
+
+        locMgr = (LocationManager) this.getSystemService(LOCATION_SERVICE);
+        String geo = setGeo(lat, lon);
+
+        Intent intent = new Intent(PROX_ALERT, Uri.parse(geo));
+        intent.putExtra("message", message);
+        pIntent3 =
+                PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+        locMgr.addProximityAlert(lat,lon, radius, -1L, pIntent3);
+    }
+
+    /**
+     * setup the fourth proximity alert
+     * @param lat
+     * @param lon
+     * @param radius
+     * @param message
+     */
+    public void setupProxAlert4(double lat, double lon, float radius, String message) {
+        //Proximity Code
+
+        locMgr = (LocationManager) this.getSystemService(LOCATION_SERVICE);
+        String geo = setGeo(lat, lon);
+
+        Intent intent = new Intent(PROX_ALERT, Uri.parse(geo));
+        intent.putExtra("message", message);
+        pIntent4 =
+                PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+        locMgr.addProximityAlert(lat,lon, radius, -1L, pIntent4);
+    }
+    /**
+     * setup the fifth proximity alert
+     * @param lat
+     * @param lon
+     * @param radius
+     * @param message
+     */
+    public void setupProxAlert5(double lat, double lon, float radius, String message) {
+        //Proximity Code
+
+        locMgr = (LocationManager) this.getSystemService(LOCATION_SERVICE);
+        String geo = setGeo(lat, lon);
+
+        Intent intent = new Intent(PROX_ALERT, Uri.parse(geo));
+        intent.putExtra("message", message);
+        pIntent5 =
+                PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+        locMgr.addProximityAlert(lat,lon, radius, -1L, pIntent5);
+    }
+
+    /**
+     * setup the sixth proximity alert
+     * @param lat
+     * @param lon
+     * @param radius
+     * @param message
+     */
+    public void setupProxAlert6(double lat, double lon, float radius, String message) {
+        //Proximity Code
+
+        locMgr = (LocationManager) this.getSystemService(LOCATION_SERVICE);
+        String geo = setGeo(lat, lon);
+
+        Intent intent = new Intent(PROX_ALERT, Uri.parse(geo));
+        intent.putExtra("message", message);
+        pIntent6 =
+                PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+        locMgr.addProximityAlert(lat,lon, radius, -1L, pIntent6);
+    }
+
+    /**
+     * setup the seventh proximity alert
+     * @param lat
+     * @param lon
+     * @param radius
+     * @param message
+     */
+    public void setupProxAlert7(double lat, double lon, float radius, String message) {
+        //Proximity Code
+
+        locMgr = (LocationManager) this.getSystemService(LOCATION_SERVICE);
+        String geo = setGeo(lat, lon);
+
+        Intent intent = new Intent(PROX_ALERT, Uri.parse(geo));
+        intent.putExtra("message", message);
+        pIntent7 =
+                PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+        locMgr.addProximityAlert(lat, lon, radius, -1L, pIntent7);
+    }
+
+    /**
+     * setup the eighth proximity alert
+     * @param lat
+     * @param lon
+     * @param radius
+     * @param message
+     */
+    public void setupProxAlert8(double lat, double lon, float radius, String message) {
+        //Proximity Code
+
+        locMgr = (LocationManager) this.getSystemService(LOCATION_SERVICE);
+        String geo = setGeo(lat, lon);
+
+        Intent intent = new Intent(PROX_ALERT, Uri.parse(geo));
+        intent.putExtra("message", message);
+        pIntent8 =
+                PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+        locMgr.addProximityAlert(lat,lon, radius, -1L, pIntent8);
+    }
+
+    /**
+     * setup the ninth proximity alert
+     * @param lat
+     * @param lon
+     * @param radius
+     * @param message
+     */
+    public void setupProxAlert9(double lat, double lon, float radius, String message) {
+        //Proximity Code
+
+        locMgr = (LocationManager) this.getSystemService(LOCATION_SERVICE);
+        String geo = setGeo(lat, lon);
+
+        Intent intent = new Intent(PROX_ALERT, Uri.parse(geo));
+        intent.putExtra("message", message);
+        pIntent9 =
+                PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+        locMgr.addProximityAlert(lat,lon, radius, -1L, pIntent9);
+    }
+
+    /**
+     * setup the tenth proximity alert
+     * @param lat
+     * @param lon
+     * @param radius
+     * @param message
+     */
+    public void setupProxAlert10(double lat, double lon, float radius, String message) {
+        //Proximity Code
+
+        locMgr = (LocationManager) this.getSystemService(LOCATION_SERVICE);
+        String geo = setGeo(lat, lon);
+
+        Intent intent = new Intent(PROX_ALERT, Uri.parse(geo));
+        intent.putExtra("message", message);
+        pIntent10 =
+                PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+        locMgr.addProximityAlert(lat,lon, radius, -1L, pIntent10);
+    }
+
+    /**
+     * setup the eleventh proximity alert
+     * @param lat
+     * @param lon
+     * @param radius
+     * @param message
+     */
+    public void setupProxAlert11(double lat, double lon, float radius, String message) {
+        //Proximity Code
+
+        locMgr = (LocationManager) this.getSystemService(LOCATION_SERVICE);
+        String geo = setGeo(lat, lon);
+
+        Intent intent = new Intent(PROX_ALERT, Uri.parse(geo));
+        intent.putExtra("message", message);
+        pIntent11 =
+                PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+        locMgr.addProximityAlert(lat,lon, radius, -1L, pIntent11);
+    }
+
+    /**
+     * setup the twelfth proximity alert
+     * @param lat
+     * @param lon
+     * @param radius
+     * @param message
+     */
+    public void setupProxAlert12(double lat, double lon, float radius, String message) {
+        //Proximity Code
+
+        locMgr = (LocationManager) this.getSystemService(LOCATION_SERVICE);
+        String geo = setGeo(lat, lon);
+
+        Intent intent = new Intent(PROX_ALERT, Uri.parse(geo));
+        intent.putExtra("message", message);
+        pIntent12 =
+                PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+        locMgr.addProximityAlert(lat,lon, radius, -1L, pIntent12);
+    }
+
+    /**
+     * setup the thirteenth proximity alert
+     * @param lat
+     * @param lon
+     * @param radius
+     * @param message
+     */
+    public void setupProxAlert13(double lat, double lon, float radius, String message) {
+        //Proximity Code
+
+        locMgr = (LocationManager) this.getSystemService(LOCATION_SERVICE);
+        String geo = setGeo(lat, lon);
+
+        Intent intent = new Intent(PROX_ALERT, Uri.parse(geo));
+        intent.putExtra("message", message);
+        pIntent13 =
+                PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+        locMgr.addProximityAlert(lat,lon, radius, -1L, pIntent13);
+    }
+
+    /**
+     * setup the fourteenth proximity alert
+     * @param lat
+     * @param lon
+     * @param radius
+     * @param message
+     */
+    public void setupProxAlert14(double lat, double lon, float radius, String message) {
+        //Proximity Code
+
+        locMgr = (LocationManager) this.getSystemService(LOCATION_SERVICE);
+        String geo = setGeo(lat, lon);
+
+        Intent intent = new Intent(PROX_ALERT, Uri.parse(geo));
+        intent.putExtra("message", message);
+        pIntent14 =
+                PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+        locMgr.addProximityAlert(lat,lon, radius, -1L, pIntent14);
+    }
+
+    /**
+     * setup the fifteenth proximity alert
+     * @param lat
+     * @param lon
+     * @param radius
+     * @param message
+     */
+    public void setupProxAlert15(double lat, double lon, float radius, String message) {
+        //Proximity Code
+
+        locMgr = (LocationManager) this.getSystemService(LOCATION_SERVICE);
+        String geo = setGeo(lat, lon);
+
+        Intent intent = new Intent(PROX_ALERT, Uri.parse(geo));
+        intent.putExtra("message", message);
+        pIntent15 =
+                PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+        locMgr.addProximityAlert(lat,lon, radius, -1L, pIntent15);
+    }
+
+    /**
+     * setup the sixteenth proximity alert
+     * @param lat
+     * @param lon
+     * @param radius
+     * @param message
+     */
+    public void setupProxAlert16(double lat, double lon, float radius, String message) {
+        //Proximity Code
+
+        locMgr = (LocationManager) this.getSystemService(LOCATION_SERVICE);
+        String geo = setGeo(lat, lon);
+
+        Intent intent = new Intent(PROX_ALERT, Uri.parse(geo));
+        intent.putExtra("message", message);
+        pIntent16 =
+                PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+        locMgr.addProximityAlert(lat,lon, radius, -1L, pIntent16);
+    }
+
+    /**
+     * setup the seventeenth proximity alert
+     * @param lat
+     * @param lon
+     * @param radius
+     * @param message
+     */
+    public void setupProxAlert17(double lat, double lon, float radius, String message) {
+        //Proximity Code
+
+        locMgr = (LocationManager) this.getSystemService(LOCATION_SERVICE);
+        String geo = setGeo(lat, lon);
+
+        Intent intent = new Intent(PROX_ALERT, Uri.parse(geo));
+        intent.putExtra("message", message);
+        pIntent17 =
+                PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+        locMgr.addProximityAlert(lat,lon, radius, -1L, pIntent17);
+    }
+
+    /**
+     * setup the eighteenth proximity alert
+     * @param lat
+     * @param lon
+     * @param radius
+     * @param message
+     */
+    public void setupProxAlert18(double lat, double lon, float radius, String message) {
+        //Proximity Code
+
+        locMgr = (LocationManager) this.getSystemService(LOCATION_SERVICE);
+        String geo = setGeo(lat, lon);
+
+        Intent intent = new Intent(PROX_ALERT, Uri.parse(geo));
+        intent.putExtra("message", message);
+        pIntent18 =
+                PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+        locMgr.addProximityAlert(lat,lon, radius, -1L, pIntent18);
+    }
+
+    /**
+     * setup the nineteenth proximity alert
+     * @param lat
+     * @param lon
+     * @param radius
+     * @param message
+     */
+    public void setupProxAlert19(double lat, double lon, float radius, String message) {
+        //Proximity Code
+
+        locMgr = (LocationManager) this.getSystemService(LOCATION_SERVICE);
+        String geo = setGeo(lat, lon);
+
+        Intent intent = new Intent(PROX_ALERT, Uri.parse(geo));
+        intent.putExtra("message", message);
+        pIntent19 =
+                PendingIntent.getBroadcast(getApplicationContext(), 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
+
+        locMgr.addProximityAlert(lat,lon, radius, -1L, pIntent19);
+    }
     protected void onDestroy() {
         super.onDestroy();
         unregisterReceiver(proxReceiver);
@@ -664,6 +1057,9 @@ public class StartGame extends Activity implements ConnectionCallbacks,
         locMgr.removeProximityAlert(pIntent2);
     }
 
+    /**
+     * A method to add the proximity alerts
+     */
     public void addAlerts() {
         ArrayList<LocationObject> locationObjectArrayList = populateLocationData();
         LocationObject canil_harvest_centre = locationObjectArrayList.get(0);
@@ -762,7 +1158,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
         double welcome_centreLatitudeValue = welcome_centre.getLatitudeValue();
         String welcome_centreBuildingName = "Welcome Centre";
 
-        setupProxAlert1(atriumLatitudeValue, atriumLongitudeValue, 10, "Atrium" );
+        setupProxAlert1(atriumLatitudeValue, atriumLongitudeValue, 10, "Atrium");
         setupProxAlert2(canil_harvest_centreLatitudeValue, canil_harvest_centreLongitudeValue, 10, "CANIL Harvest Centre");
     }
 }

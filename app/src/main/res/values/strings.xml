@@ -3,6 +3,7 @@
     <string name="app_name">TWU Campus Map Game</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_stat_game">StatGame</string>
+    <string name="hello_world">Hello world!</string>
 
     //MainActivity
     <string name="title_activity_main">MainActivity</string>
@@ -28,7 +29,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////////////
     //Location Names and coordinates
 
-    //CANIL Harbest Centre
+    //CANIL Harvest Centre
     <string name="canil_harvest_centre">CANIL Harbest Centre</string>
     <string name="canil_harvest_centre_longitude">-122.596444</string>
     <string name="canil_harvest_centre_latitude">49.139901</string>
@@ -122,8 +123,36 @@
     <string name="welcome_centre">Welcome Centre</string>
     <string name="welcome_centre_longitude">-122.600987</string>
     <string name="welcome_centre_latitude">49.141827</string>
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
+    //FIeldTrip
     <string name="title_activity_field_trip">FieldTrip</string>
+    <string name="thingsToDoHere">Things to do here:</string>
 
-    <string name="hello_world">Hello world!</string>
+    //CANIL Centre
+    <string name="welcomeTextCanil">Welcome to the CANIL Harvest Centre</string>
+    <string name="thingsToDoAtCanil"></string>
 
+    //David E. Enarson Gym
+    <string name="welcomeTextGym">Welcome to the David E. Enarson Gym</string>
+    <string name="thingsToDoAtGym"></string>
+
+    //Douglas Centre
+    <string name="welcomeTextDouglasCentre">Welcome to the Douglas Centre</string>
+    <string name="thingsToDoAtDouglasCentre"></string>
+
+    //Douglas Hall
+    <string name="welcomeTextDouglasHall">Welcome to the Douglas Hall</string>
+    <string name="thingsToDoAtDouglasHall"></string>
+
+    //Fosmark Centre
+
+
+    //Larsen Artium
+    <string name="welcomeTextAtrium">Welcome to the Larsen Atrium</string>
+    <string name="thingsToDoAtAtrium">This is a great place to study. Sometimes people even sleep here. The yearbook photos are taken here as well.</string>
+
+    //
 </resources>

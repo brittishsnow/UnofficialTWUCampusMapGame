@@ -27,7 +27,7 @@ public class FieldTrip extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 Intent proximityIntent;
-                proximityIntent = new Intent(context, FieldTrip.class);
+                proximityIntent = new Intent(context, StartGame.class);
                 context.startActivity(proximityIntent);
 
             }
