@@ -133,27 +133,74 @@
 
     //CANIL Centre
     <string name="welcomeTextCanil">Welcome to the CANIL Harvest Centre</string>
-    <string name="thingsToDoAtCanil"></string>
+    <string name="thingsToDoAtCanil">Typically language courses are offered in this building</string>
 
     //David E. Enarson Gym
     <string name="welcomeTextGym">Welcome to the David E. Enarson Gym</string>
-    <string name="thingsToDoAtGym"></string>
+    <string name="thingsToDoAtGym">The place where you should be every weekday from 11:00am - 11:30am. I.E. CHAPEL. Also used for HKIN courses and sports.</string>
 
     //Douglas Centre
     <string name="welcomeTextDouglasCentre">Welcome to the Douglas Centre</string>
-    <string name="thingsToDoAtDouglasCentre"></string>
+    <string name="thingsToDoAtDouglasCentre">TWUSA is based here. Also the lower cafe is just below.</string>
 
     //Douglas Hall
     <string name="welcomeTextDouglasHall">Welcome to the Douglas Hall</string>
-    <string name="thingsToDoAtDouglasHall"></string>
+    <string name="thingsToDoAtDouglasHall">Dorms for any undergradss. Nice community</string>
 
     //Fosmark Centre
     <string name="welcomeTextFosmark">Welcome to the Fosmark</string>
-    <string name="thingsToDoAtFosmark"></string>
+    <string name="thingsToDoAtFosmark">Some business course are held here from time to time. The Fosmark Centre was made in honour of two brothers, Carl and Lee Fosmark.</string>
+
+    //Fraser Hall
+    <string name="welcomeTextFraserHall">Welcome to the Fraser Hall</string>
+    <string name="thingsToDoAtFraserHall">Check some dorm rooms and play ping pong in the lounge</string>
+
+    //Gym Portable
+    <string name="welcomeTextGymPortable">Welcome to the Gym Portable</string>
+    <string name="thingsToDoAtGymPortable">Admire the architecture</string>
 
     //Larsen Artium
     <string name="welcomeTextAtrium">Welcome to the Larsen Atrium</string>
     <string name="thingsToDoAtAtrium">This is a great place to study. Sometimes people even sleep here. The yearbook photos are taken here as well.</string>
 
-    //
+    //Mattson Centre
+    <string name="welcomeTextMattsonCentre">Welcome to the Mattson Centre</string>
+    <string name="thingsToDoAtMattsonCentre">If you hanve anything to discuss with the registrar this is the place to go</string>
+
+    //McMillan Hall
+    <string name="welcomeTextMcmillanHall">Welcome to the McMillan Hall</string>
+    <string name="thingsToDoAtMcmillanHall">Housing for upperclassman.</string>
+
+    //Music Building
+    <string name="welcomeTextMusicBuilding">Welcome to the Music Building</string>
+    <string name="thingsToDoAtMusicBuilding">Some education and english class are held here but mainly this is where all music courses will be held.</string>
+
+    //Neufeld Science Centre
+    <string name="welcomeTextNefeldCentre">Welcome to the Neufeld Science Centre</string>
+    <string name="thingsToDoAtNeufeldCentre">If your major has anyting to do with Math or Science; You Will Practically Live In This Building.</string>
+
+    //Northwest Building
+    <string name="welcomeTextNorthwestBuilding">Welcome to the Northwest Building</string>
+    <string name="thingsToDoAtNorthwestBuilding">All girls housing, also the main building for the business department.</string>
+
+    //Reimer Student Centre
+    <string name="welcomeTextReimerCentre">Welcome to the Reimer Student Centre</string>
+    <string name="thingsToDoAtReimerCentre">Located next to main cafe. If you have anything to discuss as of student issues or housing issues you come here.</string>
+
+    //Robert N. Thompson Building
+    <string name="welcomeTextRNTBuilding">Welcome to the Robert N. Thompson Building</string>
+    <string name="thingsToDoAtRNTBuilding">Home of the Theatre and English department</string>
+
+    //Robson Hall
+    <string name="welcomeTextRobsonHall">Welcome to the Robson Hall</string>
+    <string name="thingsToDoAtRobsonHall">Another upperclassman housing building. But there is an underground parking lot for this one.</string>
+
+    //Vernon Strombeck Centre
+    <string name="welcomeTextVernonStrombeckCentre">Welcome to the Vernon Strombeck Centre</string>
+    <string name="thingsToDoAtVernonStrombeckCentre">Pretty much only education majors know what the inside of this building looks like</string>
+
+    //Welcome Centre
+    <string name="welcomeTextWelcomeCentre">Welcome to the Welcome Centre</string>
+    <string name="thingsToDoAtWelcomeCentre">Any parking issues are resolved here</string>
+
 </resources>
