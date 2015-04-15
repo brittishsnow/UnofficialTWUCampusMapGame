@@ -31,7 +31,9 @@ public class ProximityReceiver extends BroadcastReceiver {
         boolean entering = extras.getBoolean(LocationManager.KEY_PROXIMITY_ENTERING);
 
         if (extras != null) {
+
             if( entering == true) {
+
                 Intent proximityIntent;
                 proximityIntent = new Intent(context, FieldTrip.class);
                 context.startActivity(proximityIntent);
