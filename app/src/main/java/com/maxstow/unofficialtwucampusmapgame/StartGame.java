@@ -315,18 +315,30 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
             distance2.setText(distanceTogymString);
 
+            if (distanceTogym <= 5) {
+                Intent distanceIntent = new Intent(this, FieldTrip2.class);
+                startActivity(distanceIntent);
+            }
 
             double distanceTodouglas_centre = calculateDistance( latitude, longitude, douglas_centreLatitudeValue, douglas_centreLongitudeValue);
             String distanceTodouglas_centreString = douglas_centreBuildingName + ": " + round(distanceTodouglas_centre, 2) + " meters" ;
 
             distance3.setText(distanceTodouglas_centreString);
 
+            if (distanceTodouglas_centre <= 5) {
+                Intent distanceIntent = new Intent(this, FieldTrip3.class);
+                startActivity(distanceIntent);
+            }
 
             double distanceTodouglas_hall = calculateDistance( latitude, longitude, douglas_hallLatitudeValue, douglas_hallLongitudeValue);
             String distanceTodouglas_hallString = douglas_hallBuildingName + ": " + round(distanceTodouglas_hall, 2) + " meters" ;
 
             distance4.setText(distanceTodouglas_hallString);
 
+            if (distanceTodouglas_hall <= 5) {
+                Intent distanceIntent = new Intent(this, FieldTrip4.class);
+                startActivity(distanceIntent);
+            }
 
             double distanceToezra_house = calculateDistance( latitude, longitude, ezra_houseLatitudeValue, ezra_houseLongitudeValue);
             String distanceToezra_houseString = ezra_houseBuildingName + ": " + round(distanceToezra_house, 2) + " meters" ;
