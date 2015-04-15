@@ -11,13 +11,6 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <android:uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18" />
-    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <android:uses-permission
-        android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="18" />
 
     <application
         android:allowBackup="true"
@@ -60,11 +53,79 @@
 
         <activity
             android:name=".FieldTrip"
-            android:label="@string/title_activity_field_trip"
-            android:parentActivityName=".StartGame" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.maxstow.unofficialtwucampusmapgame.StartGame" />
+            android:label="@string/title_activity_field_trip">
+        </activity>
+        <activity
+            android:name=".FieldTrip2"
+            android:label="@string/title_activity_field_trip">
+        </activity>
+        <activity
+            android:name=".FieldTrip3"
+            android:label="@string/title_activity_field_trip">
+        </activity>
+        <activity
+            android:name=".FieldTrip4"
+            android:label="@string/title_activity_field_trip">
+        </activity>
+        <activity
+            android:name=".FieldTrip5"
+            android:label="@string/title_activity_field_trip">
+        </activity>
+        <activity
+            android:name=".FieldTrip6"
+            android:label="@string/title_activity_field_trip">
+        </activity>
+        <activity
+            android:name=".FieldTrip7"
+            android:label="@string/title_activity_field_trip">
+        </activity>
+        <activity
+            android:name=".FieldTrip8"
+            android:label="@string/title_activity_field_trip">
+        </activity>
+        <activity
+            android:name=".FieldTrip9"
+            android:label="@string/title_activity_field_trip">
+        </activity>
+        <activity
+            android:name=".FieldTrip10"
+            android:label="@string/title_activity_field_trip">
+        </activity>
+        <activity
+            android:name=".FieldTrip11"
+            android:label="@string/title_activity_field_trip">
+        </activity>
+        <activity
+            android:name=".FieldTrip12"
+            android:label="@string/title_activity_field_trip">
+        </activity>
+        <activity
+            android:name=".FieldTrip13"
+            android:label="@string/title_activity_field_trip">
+        </activity>
+        <activity
+            android:name=".FieldTrip14"
+            android:label="@string/title_activity_field_trip">
+        </activity>
+        <activity
+            android:name=".FieldTrip15"
+            android:label="@string/title_activity_field_trip">
+        </activity>
+        <activity
+            android:name=".FieldTrip16"
+            android:label="@string/title_activity_field_trip">
+        </activity>
+        <activity
+            android:name=".FieldTrip17"
+            android:label="@string/title_activity_field_trip">
+        </activity>
+        <activity
+            android:name=".FieldTrip18"
+            android:label="@string/title_activity_field_trip">
+        </activity>
+        <activity
+            android:name=".FieldTrip19"
+            android:label="@string/title_activity_field_trip">
         </activity>
     </application>
 
