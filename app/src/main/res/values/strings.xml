@@ -129,6 +129,25 @@
 
     //FIeldTrip
     <string name="title_activity_field_trip">FieldTrip</string>
+    <string name="title_activity_field_trip2">FieldTrip2</string>
+    <string name="title_activity_field_trip3">FieldTrip3</string>
+    <string name="title_activity_field_trip4">FieldTrip4</string>
+    <string name="title_activity_field_trip5">FieldTrip5</string>
+    <string name="title_activity_field_trip6">FieldTrip6</string>
+    <string name="title_activity_field_trip7">FieldTrip7</string>
+    <string name="title_activity_field_trip8">FieldTrip8</string>
+    <string name="title_activity_field_trip9">FieldTrip9</string>
+    <string name="title_activity_field_trip10">FieldTrip10</string>
+    <string name="title_activity_field_trip11">FieldTrip11</string>
+    <string name="title_activity_field_trip12">FieldTrip12</string>
+    <string name="title_activity_field_trip13">FieldTrip13</string>
+    <string name="title_activity_field_trip14">FieldTrip14</string>
+    <string name="title_activity_field_trip15">FieldTrip15</string>
+    <string name="title_activity_field_trip16">FieldTrip16</string>
+    <string name="title_activity_field_trip17">FieldTrip17</string>
+    <string name="title_activity_field_trip18">FieldTrip18</string>
+    <string name="title_activity_field_trip19">FieldTrip19</string>
+
     <string name="thingsToDoHere">Things to do here:</string>
 
     //CANIL Centre
@@ -202,24 +221,5 @@
     //Welcome Centre
     <string name="welcomeTextWelcomeCentre">Welcome to the Welcome Centre</string>
     <string name="thingsToDoAtWelcomeCentre">Any parking issues are resolved here</string>
-    <string name="title_activity_feild_trip2">FeildTrip2</string>
-    <string name="title_activity_field_trip3">FieldTrip3</string>
-    <string name="title_activity_field_trip2">FieldTrip2</string>
-    <string name="title_activity_field_trip4">FieldTrip4</string>
-    <string name="title_activity_field_trip5">FieldTrip5</string>
-    <string name="title_activity_field_trip6">FieldTrip6</string>
-    <string name="title_activity_field_trip7">FieldTrip7</string>
-    <string name="title_activity_field_trip8">FieldTrip8</string>
-    <string name="title_activity_field_trip9">FieldTrip9</string>
-    <string name="title_activity_field_trip10">FieldTrip10</string>
-    <string name="title_activity_field_trip11">FieldTrip11</string>
-    <string name="title_activity_field_trip12">FieldTrip12</string>
-    <string name="title_activity_field_trip13">FieldTrip13</string>
-    <string name="title_activity_field_trip14">FieldTrip14</string>
-    <string name="title_activity_field_trip15">FieldTrip15</string>
-    <string name="title_activity_field_trip16">FieldTrip16</string>
-    <string name="title_activity_field_trip17">FieldTrip17</string>
-    <string name="title_activity_field_trip18">FieldTrip18</string>
-    <string name="title_activity_field_trip19">FieldTrip19</string>
 
 </resources>
