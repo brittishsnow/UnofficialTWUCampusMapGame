@@ -11,6 +11,14 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <android:uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -53,6 +61,154 @@
         <activity
             android:name=".FieldTrip"
             android:label="@string/title_activity_field_trip"
+            android:parentActivityName=".StartGame" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maxstow.unofficialtwucampusmapgame.StartGame" />
+        </activity>
+        <activity
+            android:name=".FeildTrip2"
+            android:label="@string/title_activity_feild_trip2" >
+        </activity>
+        <activity
+            android:name=".FieldTrip3"
+            android:label="@string/title_activity_field_trip3"
+            android:parentActivityName=".StartGame" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maxstow.unofficialtwucampusmapgame.StartGame" />
+        </activity>
+        <activity
+            android:name=".FieldTrip2"
+            android:label="@string/title_activity_field_trip2"
+            android:parentActivityName=".StartGame" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maxstow.unofficialtwucampusmapgame.StartGame" />
+        </activity>
+        <activity
+            android:name=".FieldTrip4"
+            android:label="@string/title_activity_field_trip4"
+            android:parentActivityName=".StartGame" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maxstow.unofficialtwucampusmapgame.StartGame" />
+        </activity>
+        <activity
+            android:name=".FieldTrip5"
+            android:label="@string/title_activity_field_trip5"
+            android:parentActivityName=".StartGame" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maxstow.unofficialtwucampusmapgame.StartGame" />
+        </activity>
+        <activity
+            android:name=".FieldTrip6"
+            android:label="@string/title_activity_field_trip6"
+            android:parentActivityName=".StartGame" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maxstow.unofficialtwucampusmapgame.StartGame" />
+        </activity>
+        <activity
+            android:name=".FieldTrip7"
+            android:label="@string/title_activity_field_trip7"
+            android:parentActivityName=".StartGame" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maxstow.unofficialtwucampusmapgame.StartGame" />
+        </activity>
+        <activity
+            android:name=".FieldTrip8"
+            android:label="@string/title_activity_field_trip8"
+            android:parentActivityName=".StartGame" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maxstow.unofficialtwucampusmapgame.StartGame" />
+        </activity>
+        <activity
+            android:name=".FieldTrip9"
+            android:label="@string/title_activity_field_trip9"
+            android:parentActivityName=".StartGame" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maxstow.unofficialtwucampusmapgame.StartGame" />
+        </activity>
+        <activity
+            android:name=".FieldTrip10"
+            android:label="@string/title_activity_field_trip10"
+            android:parentActivityName=".StartGame" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maxstow.unofficialtwucampusmapgame.StartGame" />
+        </activity>
+        <activity
+            android:name=".FieldTrip11"
+            android:label="@string/title_activity_field_trip11"
+            android:parentActivityName=".StartGame" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maxstow.unofficialtwucampusmapgame.StartGame" />
+        </activity>
+        <activity
+            android:name=".FieldTrip12"
+            android:label="@string/title_activity_field_trip12"
+            android:parentActivityName=".StartGame" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maxstow.unofficialtwucampusmapgame.StartGame" />
+        </activity>
+        <activity
+            android:name=".FieldTrip13"
+            android:label="@string/title_activity_field_trip13"
+            android:parentActivityName=".StartGame" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maxstow.unofficialtwucampusmapgame.StartGame" />
+        </activity>
+        <activity
+            android:name=".FieldTrip14"
+            android:label="@string/title_activity_field_trip14"
+            android:parentActivityName=".StartGame" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maxstow.unofficialtwucampusmapgame.StartGame" />
+        </activity>
+        <activity
+            android:name=".FieldTrip15"
+            android:label="@string/title_activity_field_trip15"
+            android:parentActivityName=".StartGame" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maxstow.unofficialtwucampusmapgame.StartGame" />
+        </activity>
+        <activity
+            android:name=".FieldTrip16"
+            android:label="@string/title_activity_field_trip16"
+            android:parentActivityName=".StartGame" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maxstow.unofficialtwucampusmapgame.StartGame" />
+        </activity>
+        <activity
+            android:name=".FieldTrip17"
+            android:label="@string/title_activity_field_trip17"
+            android:parentActivityName=".StartGame" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maxstow.unofficialtwucampusmapgame.StartGame" />
+        </activity>
+        <activity
+            android:name=".FieldTrip18"
+            android:label="@string/title_activity_field_trip18"
+            android:parentActivityName=".StartGame" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.maxstow.unofficialtwucampusmapgame.StartGame" />
+        </activity>
+        <activity
+            android:name=".FieldTrip19"
+            android:label="@string/title_activity_field_trip19"
             android:parentActivityName=".StartGame" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

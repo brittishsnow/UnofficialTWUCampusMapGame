@@ -305,7 +305,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
             distance1.setText(distanceTocanil_harvest_centreString);
 
-            if (distanceTocanil_harvest_centre < 5) {
+            if (distanceTocanil_harvest_centre <= 5) {
                 Intent distanceIntent = new Intent(this, FieldTrip.class);
                 startActivity(distanceIntent);
             }
