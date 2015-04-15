@@ -8,22 +8,31 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 public class FieldTrip extends ActionBarActivity {
 
-    private Button backButton;
-    private final Context context = null;
+        private Button backButton;
+        private final Context context = null;
+        private TextView welcomeText, thingsToDo, thingsToDoThere;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_field_trip);
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_field_trip);
 
+            welcomeText = (TextView) findViewById(R.id.welcomeText);
+            thingsToDo = (TextView) findViewById(R.id.thingsToDo);
+            thingsToDoThere = (TextView) findViewById(R.id.thingsToDoThere);
 
-        backButton = (Button) findViewById(R.id.backButton);
+            welcomeText.setText(R.string.welcomeTextCanil);
+            thingsToDo.setText(R.string.thingsToDoHere);
+            thingsToDoThere.setText(R.string.thingsToDoAtCanil);
 
-        backButton.setOnClickListener(new View.OnClickListener() {
+            backButton = (Button) findViewById(R.id.backButton);
+
+            backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent proximityIntent;
