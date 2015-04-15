@@ -151,10 +151,6 @@
     <string name="welcomeTextFosmark">Welcome to the Fosmark</string>
     <string name="thingsToDoAtFosmark"></string>
 
-    //Fraser Hall
-    <string name="welcomeTextFraserHall">Welcome to the Fraser Hall</string>
-    <string name="thingsToDoAtFraserHall"></string>
-
     //Larsen Artium
     <string name="welcomeTextAtrium">Welcome to the Larsen Atrium</string>
     <string name="thingsToDoAtAtrium">This is a great place to study. Sometimes people even sleep here. The yearbook photos are taken here as well.</string>
