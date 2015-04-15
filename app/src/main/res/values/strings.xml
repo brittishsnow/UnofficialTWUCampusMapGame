@@ -148,7 +148,8 @@
     <string name="thingsToDoAtDouglasHall"></string>
 
     //Fosmark Centre
-
+    <string name="welcomeTextFosmark">Welcome to the Fosmark</string>
+    <string name="thingsToDoAtFosmark"></string>
 
     //Larsen Artium
     <string name="welcomeTextAtrium">Welcome to the Larsen Atrium</string>
