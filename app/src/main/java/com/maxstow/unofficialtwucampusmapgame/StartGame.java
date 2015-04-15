@@ -1,14 +1,11 @@
 package com.maxstow.unofficialtwucampusmapgame;
 
 import android.app.Activity;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.location.Criteria;
-import android.location.GpsSatellite;
 import android.location.Location;
 import android.location.LocationManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -31,32 +28,6 @@ import java.util.ArrayList;
 
 public class StartGame extends Activity implements ConnectionCallbacks,
         OnConnectionFailedListener, LocationListener {
-
-    //Proximity Alert
-
-    private final String PROX_ALERT =
-            "com.maxstow.unofficialtwucampusmapgame.intent.action.PROXIMITY_ALERT";
-    private ProximityReceiver proxReceiver = null;
-    private LocationManager locMgr = null;
-    PendingIntent pIntent1 = null;
-    PendingIntent pIntent2 = null;
-    PendingIntent pIntent3 = null;
-    PendingIntent pIntent4 = null;
-    PendingIntent pIntent5 = null;
-    PendingIntent pIntent6 = null;
-    PendingIntent pIntent7 = null;
-    PendingIntent pIntent8 = null;
-    PendingIntent pIntent9 = null;
-    PendingIntent pIntent10 = null;
-    PendingIntent pIntent11 = null;
-    PendingIntent pIntent12 = null;
-    PendingIntent pIntent13 = null;
-    PendingIntent pIntent14 = null;
-    PendingIntent pIntent15 = null;
-    PendingIntent pIntent16 = null;
-    PendingIntent pIntent17 = null;
-    PendingIntent pIntent18 = null;
-    PendingIntent pIntent19 = null;
 
     // LogCat tag
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -96,9 +67,6 @@ public class StartGame extends Activity implements ConnectionCallbacks,
         lblLocation = (TextView) findViewById(R.id.lblLocation);
         btnShowLocation = (Button) findViewById(R.id.butttonShowLocation);
         btnStartLocationUpdates = (Button) findViewById(R.id.buttonLocationUpdates);
-
-        //Add prox alerts
-        addAlerts();
 
         distance1 = (TextView) findViewById(R.id.distance1);
         distance2 = (TextView) findViewById(R.id.distance2);
@@ -663,108 +631,5 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
     protected void onDestroy() {
         super.onDestroy();
-        unregisterReceiver(proxReceiver);
-    }
-
-    /**
-     * A method to add the proximity alerts
-     */
-    public void addAlerts() {
-        ArrayList<LocationObject> locationObjectArrayList = populateLocationData();
-        LocationObject canil_harvest_centre = locationObjectArrayList.get(0);
-        LocationObject gym = locationObjectArrayList.get(1);
-        LocationObject douglas_centre = locationObjectArrayList.get(2);
-        LocationObject douglas_hall = locationObjectArrayList.get(3);
-        LocationObject ezra_house = locationObjectArrayList.get(4);
-        LocationObject fosmark_centre = locationObjectArrayList.get(5);
-        LocationObject fraser_hall = locationObjectArrayList.get(6);
-        LocationObject gym_portable = locationObjectArrayList.get(7);
-        LocationObject atrium = locationObjectArrayList.get(8);
-        LocationObject mattson_centre = locationObjectArrayList.get(9);
-        LocationObject mcmillan_hall = locationObjectArrayList.get(10);
-        LocationObject music_building = locationObjectArrayList.get(11);
-        LocationObject neufeld_science_centre = locationObjectArrayList.get(12);
-        LocationObject northwest_building = locationObjectArrayList.get(13);
-        LocationObject reimer_student_centre = locationObjectArrayList.get(14);
-        LocationObject rnt_building = locationObjectArrayList.get(15);
-        LocationObject robson_hall = locationObjectArrayList.get(16);
-        LocationObject vernon_strombeck_cetnre = locationObjectArrayList.get(17);
-        LocationObject welcome_centre = locationObjectArrayList.get(18);
-
-        double canil_harvest_centreLongitudeValue = canil_harvest_centre.getLongitudeValue();
-        double canil_harvest_centreLatitudeValue = canil_harvest_centre.getLatitudeValue();
-        String canil_harvest_centreBuildingName = "CANIL Harbest Centre";
-
-        double gymLongitudeValue = gym.getLongitudeValue();
-        double gymLatitudeValue = gym.getLatitudeValue();
-        String gymBuildingName = "David E. Enarson Gym";
-
-        double douglas_centreLongitudeValue = douglas_centre.getLongitudeValue();
-        double douglas_centreLatitudeValue = douglas_centre.getLatitudeValue();
-        String douglas_centreBuildingName = "Douglas Centre";
-
-        double douglas_hallLongitudeValue = douglas_hall.getLongitudeValue();
-        double douglas_hallLatitudeValue = douglas_hall.getLatitudeValue();
-        String douglas_hallBuildingName = "Douglas Hall";
-
-        double ezra_houseLongitudeValue = ezra_house.getLongitudeValue();
-        double ezra_houseLatitudeValue = ezra_house.getLatitudeValue();
-        String ezra_houseBuildingName = "Ezra House";
-
-        double fosmark_centreLongitudeValue = fosmark_centre.getLongitudeValue();
-        double fosmark_centreLatitudeValue = fraser_hall.getLatitudeValue();
-        String fosmark_centreBuildingName = "Fosmark Centre";
-
-        double fraser_hallLongitudeValue = fraser_hall.getLongitudeValue();
-        double fraser_hallLatitudeValue = fraser_hall.getLatitudeValue();
-        String fraser_hallBuildingName = "Fraser Hall";
-
-        double gym_portableLongitudeValue = gym_portable.getLongitudeValue();
-        double gym_portableLatitudeValue = gym_portable.getLatitudeValue();
-        String gym_portableBuildingName = "Gym Portable";
-
-        double atriumLongitudeValue = atrium.getLongitudeValue();
-        double atriumLatitudeValue = atrium.getLatitudeValue();
-        String atriumBuildingName = "Larsen Atrium";
-
-        double mattson_centreLongitudeValue = mattson_centre.getLongitudeValue();
-        double mattson_centreLatitudeValue = mattson_centre.getLatitudeValue();
-        String mattson_centreBuildingName = "Mattson Centre";
-
-        double mcmillan_hallLongitudeValue = mcmillan_hall.getLongitudeValue();
-        double mcmillan_hallLatitudeValue = mcmillan_hall.getLatitudeValue();
-        String mcmillan_hallBuildingName = "McMillan Hall";
-
-        double music_buildingLongitudeValue = music_building.getLongitudeValue();
-        double music_buildingLatitudeValue = music_building.getLatitudeValue();
-        String music_buildingBuildingName = "Music Building";
-
-        double neufeld_science_centreLongitudeValue = neufeld_science_centre.getLongitudeValue();
-        double neufeld_science_centreLatitudeValue = neufeld_science_centre.getLatitudeValue();
-        String neufeld_science_centreBuildingName = "Nefueld Science Centre";
-
-        double northwest_buildingLongitudeValue = northwest_building.getLongitudeValue();
-        double northwest_buildingLatitudeValue = northwest_building.getLatitudeValue();
-        String northwest_buildingBuildingName = "Northwest Building";
-
-        double reimer_student_centreLongitudeValue = reimer_student_centre.getLongitudeValue();
-        double reimer_student_centreLatitudeValue = reimer_student_centre.getLatitudeValue();
-        String reimer_student_centreBuildingName = "Reimer Student Centre";
-
-        double rnt_buildingLongitudeValue = rnt_building.getLongitudeValue();
-        double rnt_buildingLatitudeValue = rnt_building.getLatitudeValue();
-        String rnt_buildingBuildingName = "Robert N. Thompson Building";
-
-        double robson_hallLongitudeValue = robson_hall.getLongitudeValue();
-        double robson_hallLatitudeValue = robson_hall.getLatitudeValue();
-        String robson_hallBuildingName = "Robson Hall";
-
-        double vernon_strombeck_cetnreLongitudeValue = vernon_strombeck_cetnre.getLongitudeValue();
-        double vernon_strombeck_cetnreLatitudeValue = vernon_strombeck_cetnre.getLatitudeValue();
-        String vernon_strombeck_cetnreBuildingName = "Vernon Strombeck Centre";
-
-        double welcome_centreLongitudeValue = welcome_centre.getLongitudeValue();
-        double welcome_centreLatitudeValue = welcome_centre.getLatitudeValue();
-        String welcome_centreBuildingName = "Welcome Centre";
     }
 }
