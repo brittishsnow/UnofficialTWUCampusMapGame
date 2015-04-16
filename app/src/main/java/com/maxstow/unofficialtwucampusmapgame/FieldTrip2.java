@@ -13,7 +13,9 @@ import android.widget.TextView;
 
 public class FieldTrip2 extends ActionBarActivity {
 
-
+    /**
+     * Defines variables for global use in the class
+     */
     private Button backButton;
     private final Context context = null;
     private TextView welcomeText, thingsToDo, thingsToDoThere;
