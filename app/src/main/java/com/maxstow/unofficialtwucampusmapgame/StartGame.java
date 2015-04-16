@@ -614,54 +614,91 @@ public class StartGame extends Activity implements ConnectionCallbacks,
                 startActivity(distanceIntent);
             }
 
+            //Calculates the distance to the RNT Building as a double
             double distanceTornt_building = calculateDistance( latitude, longitude, rnt_buildingLatitudeValue, rnt_buildingLongitudeValue);
+
+            //Sets the distance as a formatted string
             String distanceTornt_buildingString = rnt_buildingBuildingName + ": " + round(distanceTornt_building, 2) + " meters" ;
 
+            //Sets the TextView distance16 as the string above
             distance16.setText(distanceTornt_buildingString);
 
+            //If the distance is less than the predetermined radius, in our case 5 meters, this will be executed
             if (distanceTornt_building <= RADIUS) {
+
+                //Brings up a notification
                 notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextRNTBuilding));
+
+                //Goes to a new activity that has the information about that building
                 Intent distanceIntent = new Intent(this, FieldTrip16.class);
                 startActivity(distanceIntent);
             }
 
+            //Calculates the distance to the Robson Hall as a double
             double distanceTorobson_hall = calculateDistance( latitude, longitude, robson_hallLatitudeValue, robson_hallLongitudeValue);
+
+            //Sets the distance as a formatted string
             String distanceTorobson_hallString = robson_hallBuildingName + ": " + round(distanceTorobson_hall, 2) + " meters" ;
 
+            //Sets the TextView distance17 as the string above
             distance17.setText(distanceTorobson_hallString);
 
+            //If the distance is less than the predetermined radius, in our case 5 meters, this will be executed
             if (distanceTorobson_hall <= RADIUS) {
+
+                //Brings up a notification
                 notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextRobsonHall));
+
+                //Goes to a new activity that has the information about that building
                 Intent distanceIntent = new Intent(this, FieldTrip17.class);
                 startActivity(distanceIntent);
             }
 
+            //Calculates the distance to the Vernon Strombeck Centre as a double
             double distanceTovernon_strombeck_cetnre = calculateDistance( latitude, longitude, vernon_strombeck_cetnreLatitudeValue, vernon_strombeck_cetnreLongitudeValue);
+
+            //Sets the distance as a formatted string
             String distanceTovernon_strombeck_cetnreString = vernon_strombeck_cetnreBuildingName + ": " + round(distanceTovernon_strombeck_cetnre, 2) + " meters" ;
 
+            //Sets the TextView distance18 as the string above
             distance18.setText(distanceTovernon_strombeck_cetnreString);
 
+            //If the distance is less than the predetermined radius, in our case 5 meters, this will be executed
             if (distanceTovernon_strombeck_cetnre <= RADIUS) {
+
+                //Brings up a notification
                 notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextVernonStrombeckCentre));
+
+                //Goes to a new activity that has the information about that building
                 Intent distanceIntent = new Intent(this, FieldTrip18.class);
                 startActivity(distanceIntent);
             }
 
+            //Calculates the distance to the Welcome Centre as a double
             double distanceTowelcome_centre = calculateDistance( latitude, longitude, welcome_centreLatitudeValue, welcome_centreLongitudeValue);
+
+            //Sets the distance as a formatted string
             String distanceTowelcome_centreString = welcome_centreBuildingName + ": " + round(distanceTowelcome_centre, 2) + " meters" ;
 
+            //Sets the TextView distance19 as the string above
             distance19.setText(distanceTowelcome_centreString);
 
+            //If the distance is less than the predetermined radius, in our case 5 meters, this will be executed
             if (distanceTowelcome_centre <= RADIUS) {
+
+                //Brings up a notification
                 notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextWelcomeCentre));
+
+                //Goes to a new activity that has the information about that building
                 Intent distanceIntent = new Intent(this, FieldTrip19.class);
                 startActivity(distanceIntent);
             }
 
+            //Prints the users current longitude and latitude for ease of mind and why not.
             lblLocation.setText(latitude + ", " + longitude);
 
         } else {
-
+            //If the phone could not get any location data it will execute the following
             lblLocation
                     .setText("(Couldn't get the location. Make sure location is enabled on the device)");
         }
