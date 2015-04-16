@@ -12,36 +12,29 @@
         android:id="@+id/welcomeContinueButton"
         android:onClick="onClick"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/welcomeText1"
-        android:layout_alignStart="@+id/welcomeText1" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Instructions"
+        android:id="@+id/textView4"
         android:layout_alignParentTop="true"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/welcomeText1"
-        android:id="@+id/welcomeText1"
-        android:textSize="17dp"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/white"/>
+        android:layout_marginTop="47dp"
+        android:textColor="#ffffffff" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/welcomeText2"
-        android:id="@+id/welcomeText2"
-        android:textSize="17dp"
-        android:layout_below="@+id/welcomeText1"
+        android:text="This app uses the GPS to track your changing location. With this, it tells you how far you are from each building around campus. The only condition is that when a alert activates when you get within 5 meters of a building, before you hit back; you must be more than 5 meters from that position. Press agree below to continue to the main part of the app"
+        android:id="@+id/textView5"
+        android:layout_below="@+id/textView4"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/white"/>
+        android:layout_marginTop="30dp"
+        android:textColor="#ffffffff"
+        android:textSize="20dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/userNamePrinted"
-        android:layout_marginTop="28dp"
-        android:textColor="@color/white"/>
 </RelativeLayout>

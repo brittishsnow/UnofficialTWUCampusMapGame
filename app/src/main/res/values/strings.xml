@@ -7,14 +7,13 @@
 
     //MainActivity
     <string name="title_activity_main">MainActivity</string>
-    <string name="mainText">Please enter a name to be used for the app.</string>
-    <string name="confirmButtonText">Comfirm</string>
+
+    <string name="confirmButtonText">Continue</string>
 
     //Welcome Activity
     <string name="title_activity_welcome">Welcome</string>
-    <string name="welcomeText1">If the name is correct please press continue.</string>
-    <string name="welcomeText2">If not, go back to edit.</string>
-    <string name="continueButtonText">Continue</string>
+
+    <string name="continueButtonText">Agree</string>
 
     //StartGameActivity
     <string name="title_activity_start_game">StartGame</string>

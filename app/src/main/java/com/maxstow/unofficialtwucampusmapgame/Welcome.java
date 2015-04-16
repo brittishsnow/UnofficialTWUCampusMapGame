@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.widget.TextView;
 
 public class Welcome extends ActionBarActivity {
 
@@ -16,14 +15,7 @@ public class Welcome extends ActionBarActivity {
         //Sets this as active layout
         setContentView(R.layout.activity_welcome);
 
-        Bundle mainData = getIntent().getExtras();
-        if (mainData == null) {
-            return;
-        }
 
-        String mainMessage = mainData.getString("mainMessage");
-        final TextView userNamePrinted = (TextView) findViewById(R.id.userNamePrinted);
-        userNamePrinted.setText(mainMessage);
     }
 
     public void onClick(View view) {
