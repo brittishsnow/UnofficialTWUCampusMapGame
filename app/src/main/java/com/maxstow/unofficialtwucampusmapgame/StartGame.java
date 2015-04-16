@@ -37,7 +37,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
     NotificationManager notificationManagerFeildTrip;
 
     /**
-     * Location tracking based off of http://www.androidhive.info/2012/07/android-gps-location-manager-tutorial/
+     * Location tracking based off of tutorial on http://www.androidhive.info/2012/07/android-gps-location-manager-tutorial/
      */
     // LogCat tag
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -434,7 +434,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
                 startActivity(distanceIntent);
             }
 
-            //Calculates the distance to the Fosmark Centre as a double
+            //Calculates the distance to the Fraser Hall as a double
             double distanceTofraser_hall = calculateDistance( latitude, longitude, fraser_hallLatitudeValue, fraser_hallLongitudeValue);
 
             //Sets the distance as a formatted string
@@ -454,90 +454,162 @@ public class StartGame extends Activity implements ConnectionCallbacks,
                 startActivity(distanceIntent);
             }
 
+            //Calculates the distance to the Gym Portable as a double
             double distanceTogym_portable = calculateDistance( latitude, longitude, gym_portableLatitudeValue, gym_portableLongitudeValue);
+
+            //Sets the distance as a formatted string
             String distanceTogym_portableString = gym_portableBuildingName + ": " + round(distanceTogym_portable, 2) + " meters" ;
 
+            //Sets the TextView distance8 as the string above
             distance8.setText(distanceTogym_portableString);
 
+            //If the distance is less than the predetermined radius, in our case 5 meters, this will be executed
             if (distanceTogym_portable <= RADIUS) {
+
+                //Brings up a notification
                 notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextGymPortable));
+
+                //Goes to a new activity that has the information about that building
                 Intent distanceIntent = new Intent(this, FieldTrip8.class);
                 startActivity(distanceIntent);
             }
 
+            //Calculates the distance to the Larsen Atrium as a double
             double distanceToatrium = calculateDistance( latitude, longitude, atriumLatitudeValue, atriumLongitudeValue);
+
+            //Sets the distance as a formatted string
             String distanceToatriumString = atriumBuildingName + ": " + round(distanceToatrium, 2) + " meters" ;
 
+            //Sets the TextView distance9 as the string above
             distance9.setText(distanceToatriumString);
 
+            //If the distance is less than the predetermined radius, in our case 5 meters, this will be executed
             if (distanceToatrium <= RADIUS) {
+
+                //Brings up a notification
                 notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextAtrium));
+
+                //Goes to a new activity that has the information about that building
                 Intent distanceIntent = new Intent(this, FieldTrip9.class);
                 startActivity(distanceIntent);
             }
 
+            //Calculates the distance to the Mattson Centre as a double
             double distanceTomattson_centre = calculateDistance( latitude, longitude, mattson_centreLatitudeValue, mattson_centreLongitudeValue);
+
+            //Sets the distance as a formatted string
             String distanceTomattson_centreString = mattson_centreBuildingName + ": " + round(distanceTomattson_centre, 2) + " meters" ;
 
+            //Sets the TextView distance10 as the string above
             distance10.setText(distanceTomattson_centreString);
 
+            //If the distance is less than the predetermined radius, in our case 5 meters, this will be executed
             if (distanceTomattson_centre <= RADIUS) {
+
+                //Brings up a notification
                 notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextMattsonCentre));
+
+                //Goes to a new activity that has the information about that building
                 Intent distanceIntent = new Intent(this, FieldTrip10.class);
                 startActivity(distanceIntent);
             }
 
+            //Calculates the distance to the McMillan Hall as a double
             double distanceTomcmillan_hall = calculateDistance( latitude, longitude, mcmillan_hallLatitudeValue, mcmillan_hallLongitudeValue);
+
+            //Sets the distance as a formatted string
             String distanceTomcmillan_hallString = mcmillan_hallBuildingName + ": " + round(distanceTomcmillan_hall, 2) + " meters" ;
 
+            //Sets the TextView distance11 as the string above
             distance11.setText(distanceTomcmillan_hallString);
 
+            //If the distance is less than the predetermined radius, in our case 5 meters, this will be executed
             if (distanceTomcmillan_hall <= RADIUS) {
+
+                //Brings up a notification
                 notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextMcmillanHall));
+
+                //Goes to a new activity that has the information about that building
                 Intent distanceIntent = new Intent(this, FieldTrip11.class);
                 startActivity(distanceIntent);
             }
 
+            //Calculates the distance to the Music Building as a double
             double distanceTomusic_building = calculateDistance( latitude, longitude, music_buildingLatitudeValue, music_buildingLongitudeValue);
+
+            //Sets the distance as a formatted string
             String distanceTomusic_buildingString = music_buildingBuildingName + ": " + round(distanceTomusic_building, 2) + " meters" ;
 
+            //Sets the TextView distance12 as the string above
             distance12.setText(distanceTomusic_buildingString);
 
+            //If the distance is less than the predetermined radius, in our case 5 meters, this will be executed
             if (distanceTomusic_building <= RADIUS) {
+
+                //Brings up a notification
                 notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextMusicBuilding));
+
+                //Goes to a new activity that has the information about that building
                 Intent distanceIntent = new Intent(this, FieldTrip12.class);
                 startActivity(distanceIntent);
             }
 
+            //Calculates the distance to the Neufeld Science Centre as a double
             double distanceToneufeld_science_centre = calculateDistance( latitude, longitude, neufeld_science_centreLatitudeValue, neufeld_science_centreLongitudeValue);
+
+            //Sets the distance as a formatted string
             String distanceToneufeld_science_centreString = neufeld_science_centreBuildingName + ": " + round(distanceToneufeld_science_centre, 2) + " meters";
 
+            //Sets the TextView distance13 as the string above
             distance13.setText(distanceToneufeld_science_centreString);
 
+            //If the distance is less than the predetermined radius, in our case 5 meters, this will be executed
             if (distanceToneufeld_science_centre <= RADIUS) {
+
+                //Brings up a notification
                 notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextNefeldCentre));
+
+                //Goes to a new activity that has the information about that building
                 Intent distanceIntent = new Intent(this, FieldTrip13.class);
                 startActivity(distanceIntent);
             }
 
+            //Calculates the distance to the Northwest Building as a double
             double distanceTonorthwest_building = calculateDistance( latitude, longitude, northwest_buildingLatitudeValue, northwest_buildingLongitudeValue);
+
+            //Sets the distance as a formatted string
             String distanceTonorthwest_buildingString = northwest_buildingBuildingName + ": " + round(distanceTonorthwest_building, 2) + " meters" ;
 
+            //Sets the TextView distance14 as the string above
             distance14.setText(distanceTonorthwest_buildingString);
 
+            //If the distance is less than the predetermined radius, in our case 5 meters, this will be executed
             if (distanceTonorthwest_building <= RADIUS) {
+
+                //Brings up a notification
                 notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextNorthwestBuilding));
+
+                //Goes to a new activity that has the information about that building
                 Intent distanceIntent = new Intent(this, FieldTrip14.class);
                 startActivity(distanceIntent);
             }
 
+            //Calculates the distance to the Northwest Building as a double
             double distanceToreimer_student_centre = calculateDistance( latitude, longitude, reimer_student_centreLatitudeValue, reimer_student_centreLongitudeValue);
+
+            //Sets the distance as a formatted string
             String distanceToreimer_student_centreString = reimer_student_centreBuildingName + ": " + round(distanceToreimer_student_centre, 2) + " meters" ;
 
+            //Sets the TextView distance15 as the string above
             distance15.setText(distanceToreimer_student_centreString);
 
+            //If the distance is less than the predetermined radius, in our case 5 meters, this will be executed
             if (distanceToreimer_student_centre <= RADIUS) {
+
+                //Brings up a notification
                 notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextReimerCentre));
+
+                //Goes to a new activity that has the information about that building
                 Intent distanceIntent = new Intent(this, FieldTrip15.class);
                 startActivity(distanceIntent);
             }
@@ -772,7 +844,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
     }
 
     /**
-     * A method to implement the Haversine formula from the site: http://www.movable-type.co.uk/scripts/latlong.html
+     * A method to implement the Haversine formula from the site; It was in javaScript so I translated it with some modifications to fit my code and do what I want: http://www.movable-type.co.uk/scripts/latlong.html
      * @param latitude1
      * @param longitude1
      * @param latitude2
