@@ -1,14 +1,13 @@
 package com.maxstow.unofficialtwucampusmapgame;
 
+//All the imports from the android os
 import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.location.Criteria;
 import android.location.Location;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,6 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+//All the imports from the google API
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -25,6 +25,7 @@ import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 
+//All the java imports
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
@@ -71,15 +72,20 @@ public class StartGame extends Activity implements ConnectionCallbacks,
     //Radius for Proximity Alert
     double RADIUS = 5.0; //5 meters
 
+    //When the activity is created it goes through the following code
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Sets this as the active layout
         setContentView(R.layout.activity_start_game);
 
+        //Associates the elements from the layout as variables for use in the StartGame java class
         lblLocation = (TextView) findViewById(R.id.lblLocation);
         btnShowLocation = (Button) findViewById(R.id.butttonShowLocation);
         btnStartLocationUpdates = (Button) findViewById(R.id.buttonLocationUpdates);
 
+        //All the distance elements from the layout
         distance1 = (TextView) findViewById(R.id.distance1);
         distance2 = (TextView) findViewById(R.id.distance2);
         distance3 = (TextView) findViewById(R.id.distance3);
@@ -106,12 +112,14 @@ public class StartGame extends Activity implements ConnectionCallbacks,
             // Building the GoogleApi client
             buildGoogleApiClient();
 
+            //Creates a location request
             createLocationRequest();
         }
 
         // Show location button click listener
         btnShowLocation.setOnClickListener(new View.OnClickListener() {
 
+            //When the button is clicked it force refreshes the information through this method
             @Override
             public void onClick(View v) {
                 displayLocation();
@@ -123,6 +131,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
         // Toggling the periodic location updates
         btnStartLocationUpdates.setOnClickListener(new View.OnClickListener() {
 
+            //This turns the locations updates on or off through a toggle
             @Override
             public void onClick(View v) {
                 togglePeriodicLocationUpdates();
@@ -131,6 +140,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
     }
 
+    //When the activity is started it checks for the GoogleApiClient and connects
     @Override
     protected void onStart() {
         super.onStart();
@@ -139,6 +149,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
         }
     }
 
+    //When the activity is resumed it checks for the GoogleApiClient
     @Override
     protected void onResume() {
         super.onResume();
@@ -151,6 +162,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
         }
     }
 
+    //When the activity is stopped it disconnects the GoogleApiClient
     @Override
     protected void onStop() {
         super.onStop();
@@ -159,6 +171,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
         }
     }
 
+    //When the activity is paused the locationUpdates are suspended
     @Override
     protected void onPause() {
         super.onPause();
@@ -166,15 +179,12 @@ public class StartGame extends Activity implements ConnectionCallbacks,
     }
 
     /**
-     * Method to display the location on UI
+     * Method to display the location on UI and the Distances
      */
     private void displayLocation() {
 
+        //Creates a variable to receive the location inportmation implementing Google's FusedLocationApi
         mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
-        LocationManager aLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        Criteria c = new Criteria();
-        c.setAccuracy(Criteria.ACCURACY_FINE);
-        String providerName = aLocationManager.getBestProvider(c, true);
 
         ArrayList<LocationObject> locationObjectArrayList = populateLocationData();
         LocationObject canil_harvest_centre = locationObjectArrayList.get(0);

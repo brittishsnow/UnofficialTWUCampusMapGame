@@ -9,9 +9,12 @@ public class MainActivity extends ActionBarActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Sets this as the active layout
         setContentView(R.layout.activity_main);
     }
 
+    //When the button is clicked this method is invoked
     public void onClick(View view) {
         Intent i = new Intent(this, Welcome.class);
         startActivity(i);

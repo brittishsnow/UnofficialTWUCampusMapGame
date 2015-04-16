@@ -18,6 +18,7 @@ public class Welcome extends ActionBarActivity {
 
     }
 
+    //When the button is click this method is invoked
     public void onClick(View view) {
         Intent buttonIntent = new Intent(this, StartGame.class);
         startActivity(buttonIntent);
