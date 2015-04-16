@@ -27,9 +27,9 @@ public class FieldTrip2 extends ActionBarActivity {
         thingsToDo = (TextView) findViewById(R.id.thingsToDo);
         thingsToDoThere = (TextView) findViewById(R.id.thingsToDoThere);
 
-        welcomeText.setText(R.string.welcomeTextCanil);
+        welcomeText.setText(R.string.welcomeTextGym);
         thingsToDo.setText(R.string.thingsToDoHere);
-        thingsToDoThere.setText(R.string.thingsToDoAtCanil);
+        thingsToDoThere.setText(R.string.thingsToDoAtGym);
 
         backButton = (Button) findViewById(R.id.backButton);
 

@@ -164,7 +164,11 @@
 
     //Douglas Hall
     <string name="welcomeTextDouglasHall">Welcome to the Douglas Hall</string>
-    <string name="thingsToDoAtDouglasHall">Dorms for any undergradss. Nice community</string>
+    <string name="thingsToDoAtDouglasHall">Dorms for any undergrad. Nice community</string>
+
+    //Douglas Hall
+    <string name="welcomeTextEzraHouse">Welcome to the Ezra House</string>
+    <string name="thingsToDoAtEzraHouse">A little portable used various functions. Quite cozy.</string>
 
     //Fosmark Centre
     <string name="welcomeTextFosmark">Welcome to the Fosmark</string>
@@ -222,4 +226,8 @@
     <string name="welcomeTextWelcomeCentre">Welcome to the Welcome Centre</string>
     <string name="thingsToDoAtWelcomeCentre">Any parking issues are resolved here</string>
 
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
+    //Notifications
+    <string name="twuFieldTrip">TWU Field Trip</string>
 </resources>

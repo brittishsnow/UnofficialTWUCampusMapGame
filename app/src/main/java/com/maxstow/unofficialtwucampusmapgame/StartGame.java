@@ -1,6 +1,9 @@
 package com.maxstow.unofficialtwucampusmapgame;
 
 import android.app.Activity;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.location.Criteria;
@@ -28,6 +31,9 @@ import java.util.ArrayList;
 
 public class StartGame extends Activity implements ConnectionCallbacks,
         OnConnectionFailedListener, LocationListener {
+
+    //For the notifications
+    NotificationManager notificationManagerFeildTrip;
 
     /**
      * Location tracking based off of http://www.androidhive.info/2012/07/android-gps-location-manager-tutorial/
@@ -61,6 +67,9 @@ public class StartGame extends Activity implements ConnectionCallbacks,
             distance5, distance6, distance7, distance8, distance9,
             distance10, distance11, distance12, distance13, distance14,
             distance15, distance16, distance17, distance18, distance19;
+
+    //Radius for Proximity Alert
+    double RADIUS = 5.0; //5 meters
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -272,12 +281,12 @@ public class StartGame extends Activity implements ConnectionCallbacks,
             longitude = mLastLocation.getLongitude();
 
             double distanceTocanil_harvest_centre = calculateDistance( latitude, longitude, canil_harvest_centreLatitudeValue, canil_harvest_centreLongitudeValue);
-            //double distanceTocanil_harvest_centre = 5.0;
             String distanceTocanil_harvest_centreString = canil_harvest_centreBuildingName + ": " + round(distanceTocanil_harvest_centre, 2) + " meters" ;
 
             distance1.setText(distanceTocanil_harvest_centreString);
 
-            if (distanceTocanil_harvest_centre <= 5) {
+            if (distanceTocanil_harvest_centre <= RADIUS) {
+                notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextCanil));
                 Intent distanceIntent = new Intent(this, FieldTrip.class);
                 startActivity(distanceIntent);
             }
@@ -287,106 +296,198 @@ public class StartGame extends Activity implements ConnectionCallbacks,
 
             distance2.setText(distanceTogymString);
 
+            if (distanceTogym <= RADIUS) {
+                notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextGym));
+                Intent distanceIntent = new Intent(this, FieldTrip2.class);
+                startActivity(distanceIntent);
+            }
 
             double distanceTodouglas_centre = calculateDistance( latitude, longitude, douglas_centreLatitudeValue, douglas_centreLongitudeValue);
             String distanceTodouglas_centreString = douglas_centreBuildingName + ": " + round(distanceTodouglas_centre, 2) + " meters" ;
 
             distance3.setText(distanceTodouglas_centreString);
 
+            if (distanceTodouglas_centre <= RADIUS) {
+                notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextDouglasCentre));
+                Intent distanceIntent = new Intent(this, FieldTrip3.class);
+                startActivity(distanceIntent);
+            }
 
             double distanceTodouglas_hall = calculateDistance( latitude, longitude, douglas_hallLatitudeValue, douglas_hallLongitudeValue);
             String distanceTodouglas_hallString = douglas_hallBuildingName + ": " + round(distanceTodouglas_hall, 2) + " meters" ;
 
             distance4.setText(distanceTodouglas_hallString);
 
+            if (distanceTodouglas_hall <= RADIUS) {
+                notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextDouglasHall));
+                Intent distanceIntent = new Intent(this, FieldTrip4.class);
+                startActivity(distanceIntent);
+            }
 
             double distanceToezra_house = calculateDistance( latitude, longitude, ezra_houseLatitudeValue, ezra_houseLongitudeValue);
             String distanceToezra_houseString = ezra_houseBuildingName + ": " + round(distanceToezra_house, 2) + " meters" ;
 
             distance5.setText(distanceToezra_houseString);
 
+            if (distanceToezra_house <= RADIUS) {
+                notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextEzraHouse));
+                Intent distanceIntent = new Intent(this, FieldTrip5.class);
+                startActivity(distanceIntent);
+            }
 
             double distanceTofosamrk_centre = calculateDistance( latitude, longitude, fosmark_centreLatitudeValue, fosmark_centreLongitudeValue);
             String distanceTofosmark_centreString = fosmark_centreBuildingName + ": " + round(distanceTofosamrk_centre, 2) + " meters" ;
 
             distance6.setText(distanceTofosmark_centreString);
 
+            if (distanceTofosamrk_centre <= RADIUS) {
+                notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextFosmark));
+                Intent distanceIntent = new Intent(this, FieldTrip6.class);
+                startActivity(distanceIntent);
+            }
+
             double distanceTofraser_hall = calculateDistance( latitude, longitude, fraser_hallLatitudeValue, fraser_hallLongitudeValue);
             String distanceTofraser_hallString = fraser_hallBuildingName + ": " + round(distanceTofraser_hall, 2) + " meters" ;
 
             distance7.setText(distanceTofraser_hallString);
 
+            if (distanceTofraser_hall <= RADIUS) {
+                notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextFraserHall));
+                Intent distanceIntent = new Intent(this, FieldTrip7.class);
+                startActivity(distanceIntent);
+            }
 
             double distanceTogym_portable = calculateDistance( latitude, longitude, gym_portableLatitudeValue, gym_portableLongitudeValue);
             String distanceTogym_portableString = gym_portableBuildingName + ": " + round(distanceTogym_portable, 2) + " meters" ;
 
             distance8.setText(distanceTogym_portableString);
 
+            if (distanceTogym_portable <= RADIUS) {
+                notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextGymPortable));
+                Intent distanceIntent = new Intent(this, FieldTrip8.class);
+                startActivity(distanceIntent);
+            }
 
             double distanceToatrium = calculateDistance( latitude, longitude, atriumLatitudeValue, atriumLongitudeValue);
             String distanceToatriumString = atriumBuildingName + ": " + round(distanceToatrium, 2) + " meters" ;
 
             distance9.setText(distanceToatriumString);
 
+            if (distanceToatrium <= RADIUS) {
+                notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextAtrium));
+                Intent distanceIntent = new Intent(this, FieldTrip9.class);
+                startActivity(distanceIntent);
+            }
 
             double distanceTomattson_centre = calculateDistance( latitude, longitude, mattson_centreLatitudeValue, mattson_centreLongitudeValue);
             String distanceTomattson_centreString = mattson_centreBuildingName + ": " + round(distanceTomattson_centre, 2) + " meters" ;
 
             distance10.setText(distanceTomattson_centreString);
 
+            if (distanceTomattson_centre <= RADIUS) {
+                notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextMattsonCentre));
+                Intent distanceIntent = new Intent(this, FieldTrip10.class);
+                startActivity(distanceIntent);
+            }
 
             double distanceTomcmillan_hall = calculateDistance( latitude, longitude, mcmillan_hallLatitudeValue, mcmillan_hallLongitudeValue);
             String distanceTomcmillan_hallString = mcmillan_hallBuildingName + ": " + round(distanceTomcmillan_hall, 2) + " meters" ;
 
             distance11.setText(distanceTomcmillan_hallString);
 
+            if (distanceTomcmillan_hall <= RADIUS) {
+                notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextMcmillanHall));
+                Intent distanceIntent = new Intent(this, FieldTrip11.class);
+                startActivity(distanceIntent);
+            }
 
             double distanceTomusic_building = calculateDistance( latitude, longitude, music_buildingLatitudeValue, music_buildingLongitudeValue);
             String distanceTomusic_buildingString = music_buildingBuildingName + ": " + round(distanceTomusic_building, 2) + " meters" ;
 
             distance12.setText(distanceTomusic_buildingString);
 
+            if (distanceTomusic_building <= RADIUS) {
+                notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextMusicBuilding));
+                Intent distanceIntent = new Intent(this, FieldTrip12.class);
+                startActivity(distanceIntent);
+            }
 
             double distanceToneufeld_science_centre = calculateDistance( latitude, longitude, neufeld_science_centreLatitudeValue, neufeld_science_centreLongitudeValue);
             String distanceToneufeld_science_centreString = neufeld_science_centreBuildingName + ": " + round(distanceToneufeld_science_centre, 2) + " meters";
 
             distance13.setText(distanceToneufeld_science_centreString);
 
+            if (distanceToneufeld_science_centre <= RADIUS) {
+                notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextNefeldCentre));
+                Intent distanceIntent = new Intent(this, FieldTrip13.class);
+                startActivity(distanceIntent);
+            }
 
             double distanceTonorthwest_building = calculateDistance( latitude, longitude, northwest_buildingLatitudeValue, northwest_buildingLongitudeValue);
             String distanceTonorthwest_buildingString = northwest_buildingBuildingName + ": " + round(distanceTonorthwest_building, 2) + " meters" ;
 
             distance14.setText(distanceTonorthwest_buildingString);
 
+            if (distanceTonorthwest_building <= RADIUS) {
+                notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextNorthwestBuilding));
+                Intent distanceIntent = new Intent(this, FieldTrip14.class);
+                startActivity(distanceIntent);
+            }
 
             double distanceToreimer_student_centre = calculateDistance( latitude, longitude, reimer_student_centreLatitudeValue, reimer_student_centreLongitudeValue);
             String distanceToreimer_student_centreString = reimer_student_centreBuildingName + ": " + round(distanceToreimer_student_centre, 2) + " meters" ;
 
             distance15.setText(distanceToreimer_student_centreString);
 
+            if (distanceToreimer_student_centre <= RADIUS) {
+                notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextReimerCentre));
+                Intent distanceIntent = new Intent(this, FieldTrip15.class);
+                startActivity(distanceIntent);
+            }
 
             double distanceTornt_building = calculateDistance( latitude, longitude, rnt_buildingLatitudeValue, rnt_buildingLongitudeValue);
             String distanceTornt_buildingString = rnt_buildingBuildingName + ": " + round(distanceTornt_building, 2) + " meters" ;
 
             distance16.setText(distanceTornt_buildingString);
 
+            if (distanceTornt_building <= RADIUS) {
+                notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextRNTBuilding));
+                Intent distanceIntent = new Intent(this, FieldTrip16.class);
+                startActivity(distanceIntent);
+            }
 
             double distanceTorobson_hall = calculateDistance( latitude, longitude, robson_hallLatitudeValue, robson_hallLongitudeValue);
             String distanceTorobson_hallString = robson_hallBuildingName + ": " + round(distanceTorobson_hall, 2) + " meters" ;
 
             distance17.setText(distanceTorobson_hallString);
 
+            if (distanceTorobson_hall <= RADIUS) {
+                notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextRobsonHall));
+                Intent distanceIntent = new Intent(this, FieldTrip17.class);
+                startActivity(distanceIntent);
+            }
 
             double distanceTovernon_strombeck_cetnre = calculateDistance( latitude, longitude, vernon_strombeck_cetnreLatitudeValue, vernon_strombeck_cetnreLongitudeValue);
             String distanceTovernon_strombeck_cetnreString = vernon_strombeck_cetnreBuildingName + ": " + round(distanceTovernon_strombeck_cetnre, 2) + " meters" ;
 
             distance18.setText(distanceTovernon_strombeck_cetnreString);
 
+            if (distanceTovernon_strombeck_cetnre <= RADIUS) {
+                notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextVernonStrombeckCentre));
+                Intent distanceIntent = new Intent(this, FieldTrip18.class);
+                startActivity(distanceIntent);
+            }
 
             double distanceTowelcome_centre = calculateDistance( latitude, longitude, welcome_centreLatitudeValue, welcome_centreLongitudeValue);
             String distanceTowelcome_centreString = welcome_centreBuildingName + ": " + round(distanceTowelcome_centre, 2) + " meters" ;
 
             distance19.setText(distanceTowelcome_centreString);
+
+            if (distanceTowelcome_centre <= RADIUS) {
+                notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextWelcomeCentre));
+                Intent distanceIntent = new Intent(this, FieldTrip19.class);
+                startActivity(distanceIntent);
+            }
 
             lblLocation.setText(latitude + ", " + longitude);
 
@@ -619,10 +720,24 @@ public class StartGame extends Activity implements ConnectionCallbacks,
         bd = bd.setScale(places, RoundingMode.HALF_UP);
         return bd.doubleValue();
     }
-
-
     protected void onDestroy() {
         super.onDestroy();
     }
 
+    /**
+     * Based off of tutorial from http://www.tutorialspoint.com/android/android_push_notification.htm
+     * @param title
+     * @param subject
+     * @param body
+     */
+    @SuppressWarnings("deprecation")
+    public void notify(String title, String subject, String body){
+        notificationManagerFeildTrip=(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+        Notification notify=new Notification(android.R.drawable.
+                stat_notify_more,title,System.currentTimeMillis());
+        PendingIntent pending = PendingIntent.getActivity(
+                getApplicationContext(),0, new Intent(),0);
+        notify.setLatestEventInfo(getApplicationContext(),subject,body,pending);
+        notificationManagerFeildTrip.notify(0, notify);
+    }
  }
