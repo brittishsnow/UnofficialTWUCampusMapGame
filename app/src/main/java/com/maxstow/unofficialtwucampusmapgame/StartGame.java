@@ -186,7 +186,10 @@ public class StartGame extends Activity implements ConnectionCallbacks,
         //Creates a variable to receive the location inportmation implementing Google's FusedLocationApi
         mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
 
+        //Sets an ArrayList named locationObjectArrayList of type LocationObject to values in the populateLocationData method
         ArrayList<LocationObject> locationObjectArrayList = populateLocationData();
+
+        //Retrieves the locationObjects from the ArrayList using the indexes
         LocationObject canil_harvest_centre = locationObjectArrayList.get(0);
         LocationObject gym = locationObjectArrayList.get(1);
         LocationObject douglas_centre = locationObjectArrayList.get(2);
@@ -207,162 +210,246 @@ public class StartGame extends Activity implements ConnectionCallbacks,
         LocationObject vernon_strombeck_cetnre = locationObjectArrayList.get(17);
         LocationObject welcome_centre = locationObjectArrayList.get(18);
 
+        //Retrieves the data for the CANIL Harvest Centre and sets it to the following variables
         double canil_harvest_centreLongitudeValue = canil_harvest_centre.getLongitudeValue();
         double canil_harvest_centreLatitudeValue = canil_harvest_centre.getLatitudeValue();
-        String canil_harvest_centreBuildingName = "CANIL Harbest Centre";
+        String canil_harvest_centreBuildingName = "CANIL Harvest Centre";
 
+        //Retrieves the data for the David E. Enarson Gym and sets it to the following variables
         double gymLongitudeValue = gym.getLongitudeValue();
         double gymLatitudeValue = gym.getLatitudeValue();
         String gymBuildingName = "David E. Enarson Gym";
 
+        //Retrieves the data for the Douglas Centre and sets it to the following variables
         double douglas_centreLongitudeValue = douglas_centre.getLongitudeValue();
         double douglas_centreLatitudeValue = douglas_centre.getLatitudeValue();
         String douglas_centreBuildingName = "Douglas Centre";
 
+        //Retrieves the data for the Douglas Hall and sets it to the following variables
         double douglas_hallLongitudeValue = douglas_hall.getLongitudeValue();
         double douglas_hallLatitudeValue = douglas_hall.getLatitudeValue();
         String douglas_hallBuildingName = "Douglas Hall";
 
+        //Retrieves the data for the Ezra House and sets it to the following variables
         double ezra_houseLongitudeValue = ezra_house.getLongitudeValue();
         double ezra_houseLatitudeValue = ezra_house.getLatitudeValue();
         String ezra_houseBuildingName = "Ezra House";
 
+        //Retrieves the data for the Fosmark Centre and sets it to the following variables
         double fosmark_centreLongitudeValue = fosmark_centre.getLongitudeValue();
         double fosmark_centreLatitudeValue = fraser_hall.getLatitudeValue();
         String fosmark_centreBuildingName = "Fosmark Centre";
 
+        //Retrieves the data for the Fraser Hall and sets it to the following variables
         double fraser_hallLongitudeValue = fraser_hall.getLongitudeValue();
         double fraser_hallLatitudeValue = fraser_hall.getLatitudeValue();
         String fraser_hallBuildingName = "Fraser Hall";
 
+        //Retrieves the data for the Gym Portable and sets it to the following variables
         double gym_portableLongitudeValue = gym_portable.getLongitudeValue();
         double gym_portableLatitudeValue = gym_portable.getLatitudeValue();
         String gym_portableBuildingName = "Gym Portable";
 
+        //Retrieves the data for the Larsen Atrium and sets it to the following variables
         double atriumLongitudeValue = atrium.getLongitudeValue();
         double atriumLatitudeValue = atrium.getLatitudeValue();
         String atriumBuildingName = "Larsen Atrium";
 
+        //Retrieves the data for the Mattson Centre and sets it to the following variables
         double mattson_centreLongitudeValue = mattson_centre.getLongitudeValue();
         double mattson_centreLatitudeValue = mattson_centre.getLatitudeValue();
         String mattson_centreBuildingName = "Mattson Centre";
 
+        //Retrieves the data for the McMillan Hall and sets it to the following variables
         double mcmillan_hallLongitudeValue = mcmillan_hall.getLongitudeValue();
         double mcmillan_hallLatitudeValue = mcmillan_hall.getLatitudeValue();
         String mcmillan_hallBuildingName = "McMillan Hall";
 
+        //Retrieves the data for the Music Building and sets it to the following variables
         double music_buildingLongitudeValue = music_building.getLongitudeValue();
         double music_buildingLatitudeValue = music_building.getLatitudeValue();
         String music_buildingBuildingName = "Music Building";
 
+        //Retrieves the data for the Neufeld Science Centre and sets it to the following variables
         double neufeld_science_centreLongitudeValue = neufeld_science_centre.getLongitudeValue();
         double neufeld_science_centreLatitudeValue = neufeld_science_centre.getLatitudeValue();
         String neufeld_science_centreBuildingName = "Nefueld Science Centre";
 
+        //Retrieves the data for the Northwest Building and sets it to the following variables
         double northwest_buildingLongitudeValue = northwest_building.getLongitudeValue();
         double northwest_buildingLatitudeValue = northwest_building.getLatitudeValue();
         String northwest_buildingBuildingName = "Northwest Building";
 
+        //Retrieves the data for the Reimer Student Centre and sets it to the following variables
         double reimer_student_centreLongitudeValue = reimer_student_centre.getLongitudeValue();
         double reimer_student_centreLatitudeValue = reimer_student_centre.getLatitudeValue();
         String reimer_student_centreBuildingName = "Reimer Student Centre";
 
+        //Retrieves the data for the Robert N. Thompson Building and sets it to the following variables
         double rnt_buildingLongitudeValue = rnt_building.getLongitudeValue();
         double rnt_buildingLatitudeValue = rnt_building.getLatitudeValue();
         String rnt_buildingBuildingName = "Robert N. Thompson Building";
 
+        //Retrieves the data for the Robson Hall and sets it to the following variables
         double robson_hallLongitudeValue = robson_hall.getLongitudeValue();
         double robson_hallLatitudeValue = robson_hall.getLatitudeValue();
         String robson_hallBuildingName = "Robson Hall";
 
+        //Retrieves the data for the Vernon Strombeck Centre and sets it to the following variables
         double vernon_strombeck_cetnreLongitudeValue = vernon_strombeck_cetnre.getLongitudeValue();
         double vernon_strombeck_cetnreLatitudeValue = vernon_strombeck_cetnre.getLatitudeValue();
         String vernon_strombeck_cetnreBuildingName = "Vernon Strombeck Centre";
 
+        //Retrieves the data for the Welcome Centre and sets it to the following variables
         double welcome_centreLongitudeValue = welcome_centre.getLongitudeValue();
         double welcome_centreLatitudeValue = welcome_centre.getLatitudeValue();
         String welcome_centreBuildingName = "Welcome Centre";
 
+        //Declares the variable latitude and longitude to use with the lastLocation variable to retrieve the users last latitude and longitude
         double latitude;
         double longitude;
+
+        //If the phone has the location tracking enabled then the following if statement will be executed
         if (mLastLocation != null) {
 
+            //Sets the longitude and latitude to the values given by the GPS
             latitude = mLastLocation.getLatitude();
             longitude = mLastLocation.getLongitude();
 
+            //Calculates the distance to the CANIL Harvest Centre as a double
             double distanceTocanil_harvest_centre = calculateDistance( latitude, longitude, canil_harvest_centreLatitudeValue, canil_harvest_centreLongitudeValue);
+
+            //Sets the distance as a formatted string
             String distanceTocanil_harvest_centreString = canil_harvest_centreBuildingName + ": " + round(distanceTocanil_harvest_centre, 2) + " meters" ;
 
+            //Sets the TextView distance1 as the string above
             distance1.setText(distanceTocanil_harvest_centreString);
 
+            //If the distance is less than the predetermined radius, in our case 5 meters, this will be executed
             if (distanceTocanil_harvest_centre <= RADIUS) {
+                //Brings up a notification
                 notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextCanil));
+
+                //Goes to a new activity that has the information about that building
                 Intent distanceIntent = new Intent(this, FieldTrip.class);
                 startActivity(distanceIntent);
             }
 
+            //Calculates the distance to the Gym as a double
             double distanceTogym = calculateDistance( latitude, longitude, gymLatitudeValue, gymLongitudeValue);
+
+            //Sets the distance as a formatted string
             String distanceTogymString = gymBuildingName + ": " + round(distanceTogym, 2) + " meters" ;
 
+            //Sets the TextView distance2 as the string above
             distance2.setText(distanceTogymString);
 
+            //If the distance is less than the predetermined radius, in our case 5 meters, this will be executed
             if (distanceTogym <= RADIUS) {
+                //Brings up a notification
                 notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextGym));
+
+                //Goes to a new activity that has the information about that building
                 Intent distanceIntent = new Intent(this, FieldTrip2.class);
                 startActivity(distanceIntent);
             }
 
+            //Calculates the distance to the Douglas Centre as a double
             double distanceTodouglas_centre = calculateDistance( latitude, longitude, douglas_centreLatitudeValue, douglas_centreLongitudeValue);
+
+            //Sets the distance as a formatted string
             String distanceTodouglas_centreString = douglas_centreBuildingName + ": " + round(distanceTodouglas_centre, 2) + " meters" ;
 
+            //Sets the TextView distance3 as the string above
             distance3.setText(distanceTodouglas_centreString);
 
+            //If the distance is less than the predetermined radius, in our case 5 meters, this will be executed
             if (distanceTodouglas_centre <= RADIUS) {
+
+                //Brings up a notification
                 notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextDouglasCentre));
+
+                //Goes to a new activity that has the information about that building
                 Intent distanceIntent = new Intent(this, FieldTrip3.class);
                 startActivity(distanceIntent);
             }
 
+            //Calculates the distance to the Douglas Hall as a double
             double distanceTodouglas_hall = calculateDistance( latitude, longitude, douglas_hallLatitudeValue, douglas_hallLongitudeValue);
+
+            //Sets the distance as a formatted string
             String distanceTodouglas_hallString = douglas_hallBuildingName + ": " + round(distanceTodouglas_hall, 2) + " meters" ;
 
+            //Sets the TextView distance4 as the string above
             distance4.setText(distanceTodouglas_hallString);
 
+            //If the distance is less than the predetermined radius, in our case 5 meters, this will be executed
             if (distanceTodouglas_hall <= RADIUS) {
+
+                //Brings up a notification
                 notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextDouglasHall));
+
+                //Goes to a new activity that has the information about that building
                 Intent distanceIntent = new Intent(this, FieldTrip4.class);
                 startActivity(distanceIntent);
             }
 
+            //Calculates the distance to the Ezra House as a double
             double distanceToezra_house = calculateDistance( latitude, longitude, ezra_houseLatitudeValue, ezra_houseLongitudeValue);
+
+            //Sets the distance as a formatted string
             String distanceToezra_houseString = ezra_houseBuildingName + ": " + round(distanceToezra_house, 2) + " meters" ;
 
+            //Sets the TextView distance5 as the string above
             distance5.setText(distanceToezra_houseString);
 
+            //If the distance is less than the predetermined radius, in our case 5 meters, this will be executed
             if (distanceToezra_house <= RADIUS) {
+
+                //Brings up a notification
                 notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextEzraHouse));
+
+                //Goes to a new activity that has the information about that building
                 Intent distanceIntent = new Intent(this, FieldTrip5.class);
                 startActivity(distanceIntent);
             }
 
+            //Calculates the distance to the Fosmark Centre as a double
             double distanceTofosamrk_centre = calculateDistance( latitude, longitude, fosmark_centreLatitudeValue, fosmark_centreLongitudeValue);
+
+            //Sets the distance as a formatted string
             String distanceTofosmark_centreString = fosmark_centreBuildingName + ": " + round(distanceTofosamrk_centre, 2) + " meters" ;
 
+            //Sets the TextView distance6 as the string above
             distance6.setText(distanceTofosmark_centreString);
 
+            //If the distance is less than the predetermined radius, in our case 5 meters, this will be executed
             if (distanceTofosamrk_centre <= RADIUS) {
+
+                //Brings up a notification
                 notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextFosmark));
+
+                //Goes to a new activity that has the information about that building
                 Intent distanceIntent = new Intent(this, FieldTrip6.class);
                 startActivity(distanceIntent);
             }
 
+            //Calculates the distance to the Fosmark Centre as a double
             double distanceTofraser_hall = calculateDistance( latitude, longitude, fraser_hallLatitudeValue, fraser_hallLongitudeValue);
+
+            //Sets the distance as a formatted string
             String distanceTofraser_hallString = fraser_hallBuildingName + ": " + round(distanceTofraser_hall, 2) + " meters" ;
 
+            //Sets the TextView distance7 as the string above
             distance7.setText(distanceTofraser_hallString);
 
+            //If the distance is less than the predetermined radius, in our case 5 meters, this will be executed
             if (distanceTofraser_hall <= RADIUS) {
+
+                //Brings up a notification
                 notify(getString(R.string.twuFieldTrip), getString(R.string.twuFieldTrip), getString(R.string.welcomeTextFraserHall));
+
+                //Goes to a new activity that has the information about that building
                 Intent distanceIntent = new Intent(this, FieldTrip7.class);
                 startActivity(distanceIntent);
             }
