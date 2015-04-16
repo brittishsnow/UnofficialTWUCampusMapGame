@@ -750,6 +750,8 @@ public class StartGame extends Activity implements ConnectionCallbacks,
      */
     protected void createLocationRequest() {
         mLocationRequest = new LocationRequest();
+
+        //These are set using the predefined constants at the top of the class
         mLocationRequest.setInterval(UPDATE_INTERVAL);
         mLocationRequest.setFastestInterval(FATEST_INTERVAL);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
@@ -825,14 +827,21 @@ public class StartGame extends Activity implements ConnectionCallbacks,
         // Assign the new location
         mLastLocation = location;
 
+        //Lets the user know that the location has changed and updated
         Toast.makeText(getApplicationContext(), "Location changed!",
                 Toast.LENGTH_SHORT).show();
 
-        // Displaying the new location on UI
+        // Displaying the new location and distances on UI
         displayLocation();
     }
+
+    /**
+     * A method to build an arraylist to contain the locations and their data
+     * @return
+     */
     public static ArrayList<LocationObject> populateLocationData() {
 
+        //Defines a new arrayList
         ArrayList<LocationObject> locationArray = new ArrayList<>();
 
         //In alphabetical order according to string value
@@ -856,6 +865,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
         String vernon_strombeck_cetnre = String.valueOf(R.string.vernon_strombeck_cetnre);
         String welcome_centre = String.valueOf(R.string.welcome_centre);
 
+        //Assigns the coordinates to the locationObjects in the arrayList locationArray
         locationArray.add(new LocationObject(canil_harvest_centre, 49.139901, -122.596444));
         locationArray.add(new LocationObject(gym, 49.141383, -122.597380));
         locationArray.add(new LocationObject(douglas_centre, 49.140162, -122.600496));
@@ -876,7 +886,7 @@ public class StartGame extends Activity implements ConnectionCallbacks,
         locationArray.add(new LocationObject(vernon_strombeck_cetnre, 49.139435, -122.605327));
         locationArray.add(new LocationObject(welcome_centre, 49.141827, -122.600987));
 
-
+        //Returns the array for use in other methods
         return locationArray;
     }
 
@@ -889,26 +899,42 @@ public class StartGame extends Activity implements ConnectionCallbacks,
      * @return
      */
     public static double calculateDistance(double latitude1, double longitude1, double latitude2, double longitude2) {
+        //A variable used for converting degrees to radians
         double toRad = (Math.PI/180);
 
+        //The radius of the earth in meters
         double radius = 6371000;
+
+        //Latitude of point1 in radians
         double lat1 = latitude1 * toRad;
+
+        //Longitude of point1 in radians
         double lon1 = longitude1 * toRad;
 
+        //Latitude of point2 in radians
         double lat2 = latitude2 * toRad;
+
+        //Longitude of point2 in radians
         double lon2 = longitude2 * toRad;
 
+        //The change in latitude in radians
         double deltaLat = (latitude2 - latitude1) * toRad;
+
+        //The change in longitude in radians
         double deltaLon = (longitude2 - longitude1) * toRad;
 
+        //The first calculation in the haversine formula
         double aHaversine = Math.sin(deltaLat/2) * Math.sin(deltaLat/2) +
                 Math.cos(lat1) * Math.cos(lat2) *
                         Math.sin(deltaLon/2) * Math.sin(deltaLon/2);
 
+        //The second calculation in the haversine formula
         double cHaversine = 2 * Math.atan2(Math.sqrt(aHaversine), Math.sqrt(1-aHaversine));
 
+        //The final calculation in the haversine formula
         double distanceHaversine = radius * cHaversine;
 
+        //Returns the result of the calculations
         return distanceHaversine;
     }
 
@@ -920,9 +946,13 @@ public class StartGame extends Activity implements ConnectionCallbacks,
      * @return
      */
     public static double round(double value, int places) {
+
+        //If the amount of decimal places to be rounded to is less than 0 then it will throw an error
         if (places < 0) throw new IllegalArgumentException();
 
         BigDecimal bd = new BigDecimal(value);
+
+        //Rounds up when over half
         bd = bd.setScale(places, RoundingMode.HALF_UP);
         return bd.doubleValue();
     }
@@ -938,11 +968,16 @@ public class StartGame extends Activity implements ConnectionCallbacks,
      */
     @SuppressWarnings("deprecation")
     public void notify(String title, String subject, String body){
+
+        //This code is used to display the notifications on when the user enters the proximity of a building of interest
         notificationManagerFeildTrip=(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
-        Notification notify=new Notification(android.R.drawable.
-                stat_notify_more,title,System.currentTimeMillis());
-        PendingIntent pending = PendingIntent.getActivity(
-                getApplicationContext(),0, new Intent(),0);
+        Notification notify =
+                new Notification(android.R.drawable.stat_notify_more,title,System.currentTimeMillis());
+
+        PendingIntent pending;
+
+        pending = PendingIntent.getActivity(
+                getApplicationContext(), 0, new Intent(), 0);
         notify.setLatestEventInfo(getApplicationContext(),subject,body,pending);
         notificationManagerFeildTrip.notify(0, notify);
     }
